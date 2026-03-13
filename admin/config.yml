@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME  # Replace with your actual repo
+  repo: blaq0rkid/bobgllc-website
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
