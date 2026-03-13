@@ -1,1 +1,5 @@
+# Redirect admin to CMS
+/admin              /admin/index.html   200
 
+# SPA fallback (if needed for future features)
+/*                  /index.html         404
