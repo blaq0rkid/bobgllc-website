@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Orchid Business Group - Master the Art of the Government Bid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050505',
+                        gold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .sliding-card {
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sliding-card:hover, .sliding-card:focus-within {
+            transform: translateY(-4px);
+            border-color: #D4AF37;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        .logo-invert {
+            transition: filter 0.3s ease;
+        }
+        html:not(.dark) .logo-invert {
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body class="bg-obsidian dark:bg-obsidian dark:text-white bg-white text-gray-900 min-h-screen">
+    
+    <!-- START SECTION: Navigation -->
+    <nav class="bg-obsidian dark:bg-obsidian bg-white border-b border-white/10 dark:border-white/10 border-gray-200 sticky top-0 z-50" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-8">
+                    <a href="/" class="flex items-center">
+                        <img src="logo.png" alt="Black Orchid Business Group Logo" class="h-10 w-auto logo-invert">
+                    </a>
+                    <div class="hidden md:flex items-center gap-6">
+                        <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold dark:hover:text-gold focus:text-gold dark:focus:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 transition-colors px-2 py-1">Home</a>
+                        
+                        <div class="relative group">
+                            <button class="nav-link text-white dark:text-white text-gray-900 hover:text-gold dark:hover:text-gold focus:text-gold dark:focus:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold transition-colors px-2 py-1 flex items-center gap-1">
+                                Intake Forms <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-64 bg-obsidian dark:bg-obsidian bg-white border border-white/10 dark:border-white/10 border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                <a href="/federal-readiness.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Federal Contracting Readiness</a>
+                                <a href="/apex-roadmap.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">APEX Roadmap</a>
+                                <a href="/sub-to-prime.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Sub-to-Prime Transition</a>
+                            </div>
+                        </div>
+                        
+                        <a href="/intelligence.html" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold dark:hover:text-gold focus:text-gold dark:focus:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold transition-colors px-2 py-1">Intelligence</a>
+                        <a href="#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold dark:hover:text-gold focus:text-gold dark:focus:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold transition-colors px-2 py-1">Services</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian dark:hover:text-obsidian hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold transition-colors">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    <button id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian dark:hover:text-obsidian hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold transition-colors">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 dark:border-white/10 border-gray-200 bg-obsidian dark:bg-obsidian bg-white">
+            <div class="px-4 py-4 flex flex-col gap-3">
+                <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Home</a>
+                <div class="border-t border-white/10 pt-2 mt-2">
+                    <p class="text-gold text-xs uppercase tracking-wider mb-2 px-2">Intake Forms</p>
+                    <a href="/federal-readiness.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Federal Contracting Readiness</a>
+                    <a href="/apex-roadmap.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">APEX Roadmap</a>
+                    <a href="/sub-to-prime.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Sub-to-Prime Transition</a>
+                </div>
+                <a href="/intelligence.html" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Intelligence</a>
+                <a href="#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Services</a>
+            </div>
+        </div>
+    </nav>
+    <!-- END SECTION -->
+
+    <main>
+        <!-- START SECTION: Hero -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-center bg-cover" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.5)), url('hero-patriotic.webp.png');" aria-labelledby="hero-heading">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+                <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-gold mb-6">
+                    Master the Art of the Government Bid
+                </h1>
+                <p class="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto">
+                    Empowering small to mid-sized firms to navigate, compete, and win in the federal, state, and local marketplace.
+                </p>
+                <p class="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-12">
+                    Black Orchid Business Group helps small to mid-sized businesses master the government bidding process with a focused, high-compliance approach—so you can pursue the right opportunities, submit stronger bids, and compete with confidence.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/apex-roadmap.html" class="inline-block bg-gold text-obsidian dark:text-obsidian text-white font-bold py-4 px-8 rounded-lg hover:bg-gold/90 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all uppercase tracking-wider text-sm">
+                        Get Your APEX Roadmap
+                    </a>
+                    <a href="/intelligence.html" class="inline-block border-2 border-gold text-gold font-bold py-4 px-8 rounded-lg hover:bg-gold hover:text-obsidian focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all uppercase tracking-wider text-sm">
+                        Explore Intelligence
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION -->
+
+        <!-- START SECTION: Latest Intelligence -->
+        <section class="py-20 bg-obsidian dark:bg-obsidian bg-white" aria-labelledby="latest-intelligence-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="latest-intelligence-heading" class="text-3xl sm:text-4xl font-bold font-serif text-gold mb-12 text-center">Latest Intelligence</h2>
+                <div class="max-w-2xl mx-auto" id="latestArticleSpotlight">
+                    <div class="sliding-card block bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg overflow-hidden">
+                        <div class="aspect-[16/9] overflow-hidden bg-gradient-to-br from-gold/20 to-obsidian">
+                            <div class="w-full h-full flex items-center justify-center text-gold/30">
+                                <i class="fas fa-newspaper text-6xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-gold/20 text-gold border border-gold/30 rounded">Latest</span>
+                            </div>
+                            <h3 class="text-2xl font-bold font-serif text-gold mb-3">Intelligence updates coming soon</h3>
+                            <p class="text-white/80 dark:text-white/80 text-gray-700 mb-4">Articles will appear here once published through the CMS.</p>
+                            <a href="/intelligence.html" class="text-gold hover:underline font-semibold">View Library <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION -->
+
+        <!-- START SECTION: Core Offerings -->
+        <section class="py-20 bg-obsidian dark:bg-obsidian bg-white" aria-labelledby="core-offerings-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="core-offerings-heading" class="text-3xl sm:text-4xl font-bold font-serif text-gold mb-12 text-center">Core Offerings</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="service-card sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" tabindex="0">
+                        <div class="text-gold text-4xl mb-4">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-gold mb-3">Custom APEX Roadmap</h3>
+                        <p class="text-white/80 dark:text-white/80 text-gray-700 mb-4">The foundation for scaling. A tailored strategic plan designed to position your business for sustainable growth in government contracting.</p>
+                        <a href="/apex-roadmap.html" class="text-gold hover:underline font-semibold">Get Started <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <div class="service-card sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" tabindex="0">
+                        <div class="text-gold text-4xl mb-4">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-gold mb-3">Roadmap + Consulting Services</h3>
+                        <p class="text-white/80 dark:text-white/80 text-gray-700 mb-4">Two paths tailored to your needs:</p>
+                        <ul class="text-white/80 dark:text-white/80 text-gray-700 flex flex-col gap-2 text-sm mb-4">
+                            <li><strong class="text-gold">Empowerment:</strong> Training your staff on market research and bidding</li>
+                            <li><strong class="text-gold">Full Management:</strong> Retainer-based service where BOBG handles the footwork</li>
+                        </ul>
+                        <a href="/apex-roadmap.html" class="text-gold hover:underline font-semibold">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <div class="service-card sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" tabindex="0">
+                        <div class="text-gold text-4xl mb-4">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-gold mb-3">Sub-to-Prime Transition</h3>
+                        <p class="text-white/80 dark:text-white/80 text-gray-700 mb-4">Helping established subcontractors move to primary contractor status with strategic positioning and capability development.</p>
+                        <a href="/sub-to-prime.html" class="text-gold hover:underline font-semibold">Start Transition <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION -->
+
+        <!-- START SECTION: Services -->
+        <section id="services" class="py-20 bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 dark:border-white/10 border-gray-200" aria-labelledby="services-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="services-heading" class="text-3xl sm:text-4xl font-bold font-serif text-gold mb-12 text-center">Our Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="service-card sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" tabindex="0">
+                        <div class="text-gold text-5xl mb-6">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-serif text-gold mb-4">Market Research & Analysis</h3>
+                        <p class="text-white/80 dark:text-white/80 text-gray-700 leading-relaxed">Deep-dive data to identify best-fit federal, state, and local opportunities—prioritizing bids you can realistically win.</p>
+                    </div>
+                    <div class="service-card sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" tabindex="0">
+                        <div class="text-gold text-5xl mb-6">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-serif text-gold mb-4">Proposal Writing & Compliance</h3>
+                        <p class="text-white/80 dark:text-white/80 text-gray-700 leading-relaxed">Compliance is the floor; persuasion is the ceiling. We craft compelling, technically sound bids aligned to solicitation requirements with clarity and precision.</p>
+                    </div>
+                    <div class="service-card sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" tabindex="0">
+                        <div class="text-gold text-5xl mb-6">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-serif text-gold mb-4">Full Bid Management</h3>
+                        <p class="text-white/80 dark:text-white/80 text-gray-700 leading-relaxed">From initial RFI to final submission—deadlines, portals, and compliance managed end-to-end so you can focus on performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION -->
+    </main>
+
+    <!-- START SECTION: Footer -->
+    <footer class="bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 dark:border-white/10 border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <h3 class="text-gold font-bold font-serif text-lg mb-4">Black Orchid Business Group</h3>
+                    <p class="text-white/70 dark:text-white/70 text-gray-600">Empowering businesses to master government contracting with precision and confidence.</p>
+                </div>
+                <div>
+                    <h3 class="text-gold font-bold font-serif text-lg mb-4">Quick Links</h3>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="/" class="text-white/70 dark:text-white/70 text-gray-600 hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="/intelligence.html" class="text-white/70 dark:text-white/70 text-gray-600 hover:text-gold transition-colors">Intelligence</a></li>
+                        <li><a href="#services" class="text-white/70 dark:text-white/70 text-gray-600 hover:text-gold transition-colors">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gold font-bold font-serif text-lg mb-4">Contact</h3>
+                    <p class="text-white/70 dark:text-white/70 text-gray-600">info@bobgllc.com</p>
+                </div>
+            </div>
+
+            <details class="mb-8 bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg">
+                <summary class="px-6 py-4 cursor-pointer text-gold font-bold hover:bg-white/10 dark:hover:bg-white/10 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-inset rounded-lg transition-colors">
+                    Privacy Policy
+                </summary>
+                <div class="px-6 py-4 text-white/80 dark:text-white/80 text-gray-700 text-sm leading-relaxed">
+                    <h4 class="font-bold text-gold mb-2">Privacy Policy</h4>
+                    <p class="mb-4">Last Updated: March 12, 2026</p>
+                    <p>Black Orchid Business Group ("BOBG") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website bobgllc.com.</p>
+                </div>
+            </details>
+
+            <details class="mb-8 bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg">
+                <summary class="px-6 py-4 cursor-pointer text-gold font-bold hover:bg-white/10 dark:hover:bg-white/10 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-inset rounded-lg transition-colors">
+                    Terms of Service
+                </summary>
+                <div class="px-6 py-4 text-white/80 dark:text-white/80 text-gray-700 text-sm leading-relaxed">
+                    <h4 class="font-bold text-gold mb-2">Terms of Service</h4>
+                    <p class="mb-4">Last Updated: March 12, 2026</p>
+                    <p>These Terms of Service ("Terms") govern your access to and use of the Black Orchid Business Group website and services.</p>
+                </div>
+            </details>
+
+            <div class="text-center text-white/60 dark:text-white/60 text-gray-500 text-sm pt-8 border-t border-white/10 dark:border-white/10 border-gray-200">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p class="mt-2">Intelligence. Strategy. Access.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END SECTION -->
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            html.classList.remove('dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
