@@ -1,205 +1,263 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelligence Library | Black Orchid Business Group</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        obsidian: '#050505',
-                        gold: '#D4AF37',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .sliding-card {
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .sliding-card:hover, .sliding-card:focus-within {
-            transform: translateY(-4px);
-            border-color: #D4AF37;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-        .logo-invert {
-            transition: filter 0.3s ease;
-        }
-        html:not(.dark) .logo-invert {
-            filter: invert(1);
-        }
-    </style>
-</head>
+<!DOCTYPE html>  
+<html lang="en" class="dark">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Intelligence Library | Black Orchid Business Group</title>  
+<script src="https://cdn.tailwindcss.com"></script>  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">  
+<script>  
+tailwind.config = {  
+    darkMode: 'class',  
+    theme: {  
+        extend: {  
+            colors: {  
+                obsidian: '#050505',  
+                gold: '#D4AF37',  
+            },  
+            fontFamily: {  
+                sans: ['Inter', 'sans-serif'],  
+                serif: ['Playfair Display', 'serif'],  
+            }  
+        }  
+    }  
+}  
+</script>  
+<style>  
+.sliding-card {  
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;  
+}  
+.sliding-card:hover, .sliding-card:focus-within {  
+    transform: translateY(-4px);  
+    border-color: #D4AF37;  
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);  
+}  
+.logo-invert {  
+    transition: filter 0.3s ease;  
+}  
+html:not(.dark) .logo-invert {  
+    filter: invert(1);  
+}  
+</style>  
+</head>  
 <body class="bg-obsidian dark:bg-obsidian dark:text-white bg-white text-gray-900 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="bg-obsidian dark:bg-obsidian bg-white border-b border-white/10 dark:border-white/10 border-gray-200 sticky top-0 z-50" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-3">
-                        <img src="/logo.png" alt="Black Orchid Business Group Logo" class="h-10 w-auto logo-invert">
-                        <span class="text-xl font-bold font-serif text-gold tracking-wider hidden sm:block">BOBG</span>
-                    </a>
-                    <div class="hidden md:flex items-center gap-6">
-                        <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Home</a>
-                        
-                        <div class="relative group">
-                            <button class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1 flex items-center gap-1">
-                                Intake Forms <i class="fas fa-chevron-down text-xs"></i>
-                            </button>
-                            <div class="absolute left-0 mt-2 w-64 bg-obsidian dark:bg-obsidian bg-white border border-white/10 dark:border-white/10 border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                <a href="/federal-readiness.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Federal Contracting Readiness</a>
-                                <a href="/apex-roadmap.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">APEX Roadmap</a>
-                                <a href="/sub-to-prime.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Sub-to-Prime Transition</a>
-                            </div>
-                        </div>
-                        
-                        <a href="/intelligence.html" class="nav-link text-gold transition-colors px-2 py-1">Intelligence</a>
-                        <a href="/#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Services</a>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-moon" id="themeIcon"></i>
-                    </button>
-                    <button id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+
+<!-- Navigation -->  
+<nav class="bg-obsidian dark:bg-obsidian bg-white border-b border-white/10 dark:border-white/10 border-gray-200 sticky top-0 z-50" aria-label="Main navigation">  
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
+    <div class="flex justify-between items-center h-16">  
+        <div class="flex items-center gap-8">  
+            <a href="/" class="flex items-center gap-3">  
+                <img src="/logo.png" alt="Black Orchid Business Group Logo" class="h-10 w-auto logo-invert">  
+                <span class="text-xl font-bold font-serif text-gold tracking-wider hidden sm:block">BOBG</span>  
+            </a>  
+            <div class="hidden md:flex items-center gap-6">  
+                <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Home</a>  
+                  
+                <div class="relative group">  
+                    <button class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1 flex items-center gap-1">  
+                        Intake Forms <i class="fas fa-chevron-down text-xs"></i>  
+                    </button>  
+                    <div class="absolute left-0 mt-2 w-64 bg-obsidian dark:bg-obsidian bg-white border border-white/10 dark:border-white/10 border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">  
+                        <a href="/federal-readiness.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Federal Contracting Readiness</a>  
+                        <a href="/apex-roadmap.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">APEX Roadmap</a>  
+                        <a href="/sub-to-prime.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Sub-to-Prime Transition</a>  
+                    </div>  
+                </div>  
+                  
+                <a href="/intelligence.html" class="nav-link text-gold transition-colors px-2 py-1">Intelligence</a>  
+                <a href="/#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Services</a>  
+            </div>  
+        </div>  
+        <div class="flex items-center gap-4">  
+            <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">  
+                <i class="fas fa-moon" id="themeIcon"></i>  
+            </button>  
+            <button id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">  
+                <i class="fas fa-bars"></i>  
+            </button>  
+        </div>  
+    </div>  
+</div>  
+<div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-obsidian dark:bg-obsidian bg-white">  
+    <div class="px-4 py-4 flex flex-col gap-3">  
+        <a href="/" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Home</a>  
+        <div class="border-t border-white/10 pt-2 mt-2">  
+            <p class="text-gold text-xs uppercase tracking-wider mb-2 px-2">Intake Forms</p>  
+            <a href="/federal-readiness.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Federal Contracting Readiness</a>  
+            <a href="/apex-roadmap.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">APEX Roadmap</a>  
+            <a href="/sub-to-prime.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Sub-to-Prime Transition</a>  
+        </div>  
+        <a href="/intelligence.html" class="text-gold px-2 py-2">Intelligence</a>  
+        <a href="/#services" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Services</a>  
+    </div>  
+</div>  
+</nav>
+
+<main>  
+<!-- Hero with Background Image -->  
+<section class="relative min-h-[40vh] flex items-center justify-center bg-center bg-cover" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.7)), url('/hero-patriotic.webp.png');">  
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">  
+        <h1 class="text-4xl sm:text-5xl font-bold font-serif text-gold mb-4">  
+            Intelligence Library  
+        </h1>  
+        <p class="text-lg text-white/90">  
+            Strategic insights and hard intelligence for federal contracting excellence.  
+        </p>  
+    </div>  
+</section>
+
+<!-- Articles Grid -->  
+<section class="py-20 bg-obsidian dark:bg-obsidian bg-white">  
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
+        <div id="articlesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">  
+              
+            <!-- CMS Loading Placeholder -->  
+            <div id="cms-placeholder" class="col-span-full text-center py-12">  
+                <div class="text-gold/30 mb-4">  
+                    <i class="fas fa-newspaper text-6xl"></i>  
+                </div>  
+                <p class="text-white/60 dark:text-white/60 text-gray-500 text-lg">  
+                    Articles will appear here once published through Decap CMS.  
+                </p>  
+                <a href="/admin" class="inline-block mt-6 px-6 py-3 border border-gold text-gold rounded-lg hover:bg-gold hover:text-obsidian transition-all">  
+                    Access CMS Admin  
+                </a>  
             </div>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="px-4 py-4 flex flex-col gap-3">
-                <a href="/" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Home</a>
-                <div class="border-t border-white/10 pt-2 mt-2">
-                    <p class="text-gold text-xs uppercase tracking-wider mb-2 px-2">Intake Forms</p>
-                    <a href="/federal-readiness.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Federal Contracting Readiness</a>
-                    <a href="/apex-roadmap.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">APEX Roadmap</a>
-                    <a href="/sub-to-prime.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Sub-to-Prime Transition</a>
-                </div>
-                <a href="/intelligence.html" class="text-gold px-2 py-2">Intelligence</a>
-                <a href="/#services" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Services</a>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <!-- Hero with Background Image -->
-        <section class="relative min-h-[40vh] flex items-center justify-center bg-center bg-cover" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.7)), url('/hero-patriotic.webp.png');">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-                <h1 class="text-4xl sm:text-5xl font-bold font-serif text-gold mb-4">
-                    Intelligence Library
-                </h1>
-                <p class="text-lg text-white/90">
-                    Strategic insights and hard intelligence for federal contracting excellence.
-                </p>
-            </div>
-        </section>
+        </div>  
+    </div>  
+</section>  
+</main>
 
-        <!-- Articles Grid -->
-        <section class="py-20 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div id="articlesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Articles will be loaded here from Decap CMS -->
-                    <div class="col-span-full text-center py-12">
-                        <div class="text-gold/30 mb-4">
-                            <i class="fas fa-newspaper text-6xl"></i>
-                        </div>
-                        <p class="text-white/60 dark:text-white/60 text-gray-500 text-lg">
-                            Articles will appear here once published through Decap CMS.
-                        </p>
-                        <a href="/admin" class="inline-block mt-6 px-6 py-3 border border-gold text-gold rounded-lg hover:bg-gold hover:text-obsidian transition-all">
-                            Access CMS Admin
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- Footer -->  
+<footer class="bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 py-12">  
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">  
+    <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm">  
+        &copy; 2026 Black Orchid Business Group. All rights reserved.  
+    </p>  
+    <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm mt-2">  
+        Intelligence. Strategy. Access.  
+    </p>  
+</div>  
+</footer>
 
-    <!-- Footer -->
-    <footer class="bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm">
-                &copy; 2026 Black Orchid Business Group. All rights reserved.
-            </p>
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm mt-2">
-                Intelligence. Strategy. Access.
-            </p>
-        </div>
-    </footer>
+<script>  
+/**  
+ * 1. ARTICLE CONFIGURATION  
+ * Add the exact filename of your markdown articles here as Penny creates them.  
+ */  
+const articlesList = [  
+    'cyber-threats-2024.md',  
+    'supply-chain-security.md',  
+    'quantum-computing-risks.md'  
+];
 
-    <script>
-        // Load articles from Decap CMS
-        async function loadArticles() {
-            try {
-                const response = await fetch('/articles/articles.json');
-                const articles = await response.json();
-                
-                const grid = document.getElementById('articlesGrid');
-                
-                if (articles.length > 0) {
-                    grid.innerHTML = articles.sort((a, b) => new Date(b.date) - new Date(a.date)).map(article => `
-                        <a href="/articles/${article.slug}.html" class="sliding-card block bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg overflow-hidden">
-                            <div class="aspect-[16/9] overflow-hidden">
-                                <img src="${article.thumbnail}" alt="${article.title}" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold font-serif text-gold mb-3">${article.title}</h3>
-                                <p class="text-white/80 dark:text-white/80 text-gray-700 mb-4 line-clamp-2">${article.excerpt}</p>
-                                <span class="text-gold hover:underline font-semibold">Read More <i class="fas fa-arrow-right ml-1"></i></span>
-                            </div>
-                        </a>
-                    `).join('');
-                }
-            } catch (error) {
-                console.log('Articles not yet loaded');
-            }
-        }
+/**  
+ * 2. MARKDOWN PARSER  
+ * Extracts title, date, excerpt, and thumbnail from the top of the .md file  
+ */  
+function parseMarkdown(text) {  
+    const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;  
+    const match = text.match(frontmatterRegex);  
+    if (!match) return null;
 
-        loadArticles();
+    const frontmatter = {};  
+    const lines = match[1].split('\n');  
+    lines.forEach(line => {  
+        const [key, ...valueParts] = line.split(':');  
+        if (key && valueParts.length) {  
+            frontmatter[key.trim()] = valueParts.join(':').trim().replace(/^["']|["']$/g, '');  
+        }  
+    });
 
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+    return { metadata: frontmatter, content: match[2].trim() };  
+}
 
-        themeToggle.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
+/**  
+ * 3. LOAD AND RENDER ARTICLES  
+ */  
+async function loadArticles() {  
+    const grid = document.getElementById('articlesGrid');  
+    const placeholder = document.getElementById('cms-placeholder');  
+      
+    if (!grid) return;
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            html.classList.remove('dark');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
+    for (const filename of articlesList) {  
+        try {  
+            // Fetch the raw markdown file from the /articles/ folder  
+            const response = await fetch(`/articles/${filename}`);  
+            if (!response.ok) continue;
 
-        document.getElementById('mobileMenuToggle').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-    </script>
-</body>
-</html>
+            const text = await response.text();  
+            const article = parseMarkdown(text);  
+            if (!article) continue;
+
+            // Remove the "empty" placeholder if we find at least one article  
+            if (placeholder) placeholder.remove();
+
+            // Create the card with Elite Obsidian styling  
+            const slug = filename.replace('.md', '');  
+            const card = document.createElement('div');  
+            card.className = 'sliding-card block bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg overflow-hidden group';  
+              
+            card.innerHTML = `  
+                <div class="aspect-[16/9] overflow-hidden">  
+                    <img src="${article.metadata.thumbnail || '/hero-patriotic.webp.png'}"   
+                         alt="${article.metadata.title}"   
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">  
+                </div>  
+                <div class="p-6">  
+                    <p class="text-gold/80 text-xs font-mono uppercase tracking-widest mb-2">  
+                        ${article.metadata.date ? new Date(article.metadata.date).toLocaleDateString('en-US', {month: 'long', year: 'numeric'}) : 'LATEST BRIEF'}  
+                    </p>  
+                    <h3 class="text-xl font-bold font-serif text-gold mb-3 group-hover:text-white transition-colors">${article.metadata.title}</h3>  
+                    <p class="text-white/80 dark:text-white/80 text-gray-700 mb-4 line-clamp-2">${article.metadata.excerpt || 'Access our specialized intelligence briefing...'}</p>  
+                    <a href="/article.html?id=${slug}" class="text-gold hover:text-white font-semibold flex items-center gap-2">  
+                        Read More <i class="fas fa-arrow-right text-xs"></i>  
+                    </a>  
+                </div>  
+            `;  
+            grid.appendChild(card);  
+        } catch (error) {  
+            console.error(`Error loading ${filename}:`, error);  
+        }  
+    }  
+}
+
+// Run the loader  
+document.addEventListener('DOMContentLoaded', loadArticles);
+
+/**  
+ * 4. THEME & MENU LOGIC  
+ */  
+const themeToggle = document.getElementById('themeToggle');  
+const themeIcon = document.getElementById('themeIcon');  
+const html = document.documentElement;
+
+themeToggle.addEventListener('click', () => {  
+    if (html.classList.contains('dark')) {  
+        html.classList.remove('dark');  
+        themeIcon.className = 'fas fa-sun';  
+        localStorage.setItem('theme', 'light');  
+    } else {  
+        html.classList.add('dark');  
+        themeIcon.className = 'fas fa-moon';  
+        localStorage.setItem('theme', 'dark');  
+    }  
+});
+
+// Apply saved theme  
+if (localStorage.getItem('theme') === 'light') {  
+    html.classList.remove('dark');  
+    themeIcon.className = 'fas fa-sun';  
+}
+
+// Mobile Menu  
+document.getElementById('mobileMenuToggle').addEventListener('click', () => {  
+    document.getElementById('mobileMenu').classList.toggle('hidden');  
+});  
+</script>  
+</body>  
+</html>  
