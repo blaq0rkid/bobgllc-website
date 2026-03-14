@@ -1,61 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Orchid Business Group | Government Contracting Experts</title>
+    <title>Black Orchid Business Group | Master the Art of the Government Bid</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- START SECTION: Navigation -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">Black Orchid Business Group</div>
+                <div class="logo-container">
+                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
+                    <div class="logo-text">Black Orchid Business Group</div>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="apex-roadmap.html">APEX Roadmap</a></li>
+                    <li><a href="federal-diagnostic.html">Federal Diagnostic</a></li>
+                    <li><a href="intelligence.html">Intelligence</a></li>
                 </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+                    <span class="toggle-icon">☀️</span>
                 </button>
             </div>
         </nav>
     </header>
+    <!-- END SECTION: Navigation -->
 
     <main>
-        <section class="hero">
+        <!-- START SECTION: Hero -->
+        <section class="hero" style="background-image: url('hero-patriotic.webp.png');" aria-labelledby="hero-heading">
             <div class="hero-content">
-                <h1>Government Contracting Excellence</h1>
-                <p>Strategic consulting services for businesses navigating the federal marketplace</p>
+                <h1 id="hero-heading">Master the Art of the <span>Government Bid</span></h1>
+                <p>Empowering small to mid-sized firms to navigate, compete, and win in the federal, state, and local marketplace.</p>
             </div>
         </section>
+        <!-- END SECTION: Hero -->
 
-        <section class="section">
+        <!-- START SECTION: Latest Intelligence -->
+        <section class="section" aria-labelledby="latest-intelligence-heading">
             <div class="container">
-                <h2 class="section-title">Latest Intelligence</h2>
+                <h2 id="latest-intelligence-heading" class="section-title">Latest Intelligence</h2>
                 <p class="section-subtitle">Stay informed with our most recent analysis</p>
+                
                 <div id="latest-article-container">
-                    <div class="loading-message">Loading latest article...</div>
+                    <a href="intelligence/ultimate-guide-federal-proposal-management.html" class="article-card" style="max-width: 800px; margin: 0 auto; display: block; text-decoration: none;">
+                        <div class="article-thumbnail">
+                            <img src="https://cdn.marblism.com/5DxQECTU4mZ.webp" alt="Abstract gold-on-black graphic for The Ultimate Guide to Federal Proposal Management">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-badge">LATEST</span>
+                            <h3>The Ultimate Guide to Federal Proposal Management</h3>
+                            <p class="article-excerpt">Stop paying the 30% Middleman Tax...</p>
+                            <span class="read-more">Read Full Analysis →</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
+        <!-- END SECTION: Latest Intelligence -->
+
+        <!-- START SECTION: Core Offerings -->
+        <section class="section" style="background-color: var(--bg-obsidian-light);" aria-labelledby="core-offerings-heading">
+            <div class="container">
+                <h2 id="core-offerings-heading" class="section-title">Core Offerings</h2>
+                <p class="section-subtitle">Premium consulting services designed for your success</p>
+                
+                <div class="card-grid">
+                    <div class="sliding-card" tabindex="0">
+                        <h3>Custom APEX Roadmap</h3>
+                        <p>The foundation for scaling your government contracting operations. A comprehensive assessment and strategic roadmap tailored to your business capabilities and growth objectives.</p>
+                    </div>
+
+                    <div class="sliding-card" tabindex="0">
+                        <h3>Roadmap + Consulting Services</h3>
+                        <p><strong>Empowerment Path:</strong> Training your staff on market research, proposal development, and bidding strategies.<br><br><strong>Full Management Path:</strong> Retainer-based service where BOBG handles the entire footwork from opportunity identification to submission.</p>
+                    </div>
+
+                    <div class="sliding-card" tabindex="0">
+                        <h3>Sub-to-Prime Transition</h3>
+                        <p>Helping established subcontractors move to primary contractor status. Strategic positioning, capability building, and competitive intelligence to make the leap successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION: Core Offerings -->
     </main>
 
+    <!-- START SECTION: Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Black Orchid Business Group. All rights reserved.</p>
-            <p>Strategic Intelligence & Government Contracting Solutions</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p>Strategic Intelligence & Government Contracting Excellence</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
+    <!-- END SECTION: Footer -->
 
     <script src="/js/dark-mode.js"></script>
-    <script src="/js/latest-article.js"></script>
 </body>
 </html>
