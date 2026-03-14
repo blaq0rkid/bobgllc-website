@@ -1,10 +1,15 @@
 
 // Article configuration - add your article filenames here
 const articles = [
-    'cyber-threats-2024.md',
-    'supply-chain-security.md',
-    'quantum-computing-risks.md'
-    // Add more article filenames as you create them
+    // Replace these with your actual article filenames
+    'article-1.md',
+    'article-2.md',
+    'article-3.md',
+    'article-4.md',
+    'article-5.md',
+    'article-6.md',
+    'article-7.md',
+    'article-8.md'
 ];
 
 // Function to parse markdown frontmatter and content
