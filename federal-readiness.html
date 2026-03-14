@@ -1,325 +1,278 @@
-
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Federal Contracting Readiness | Black Orchid Business Group</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        obsidian: '#050505',
-                        gold: '#D4AF37',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .sliding-card {
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .sliding-card:hover, .sliding-card:focus-within {
-            transform: translateY(-4px);
-            border-color: #D4AF37;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-        .logo-invert {
-            transition: filter 0.3s ease;
-        }
-        html:not(.dark) .logo-invert {
-            filter: invert(1);
-        }
-    </style>
+    <title>Federal Bidding Readiness | Black Orchid Business Group</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-obsidian dark:bg-obsidian dark:text-white bg-white text-gray-900 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="bg-obsidian dark:bg-obsidian bg-white border-b border-white/10 dark:border-white/10 border-gray-200 sticky top-0 z-50" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-3">
-                        <img src="/logo.png" alt="Black Orchid Business Group Logo" class="h-10 w-auto logo-invert">
-                        <span class="text-xl font-bold font-serif text-gold tracking-wider hidden sm:block">BOBG</span>
-                    </a>
-                    <div class="hidden md:flex items-center gap-6">
-                        <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Home</a>
-                        
-                        <div class="relative group">
-                            <button class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1 flex items-center gap-1">
-                                Intake Forms <i class="fas fa-chevron-down text-xs"></i>
-                            </button>
-                            <div class="absolute left-0 mt-2 w-64 bg-obsidian dark:bg-obsidian bg-white border border-white/10 dark:border-white/10 border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                <a href="/federal-readiness.html" class="block px-4 py-3 text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Federal Contracting Readiness</a>
-                                <a href="/apex-roadmap.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">APEX Roadmap</a>
-                                <a href="/sub-to-prime.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Sub-to-Prime Transition</a>
-                            </div>
-                        </div>
-                        
-                        <a href="/intelligence.html" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Intelligence</a>
-                        <a href="/#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Services</a>
-                    </div>
+<body>
+    <!-- START SECTION: Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
+                    <div class="logo-text">Black Orchid Business Group</div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-moon" id="themeIcon"></i>
-                    </button>
-                    <button id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="apex-roadmap.html">APEX Roadmap</a></li>
+                    <li><a href="federal-diagnostic.html" class="active">Federal Diagnostic</a></li>
+                    <li><a href="intelligence.html">Intelligence</a></li>
+                </ul>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+                    <span class="toggle-icon">☀️</span>
+                </button>
             </div>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="px-4 py-4 flex flex-col gap-3">
-                <a href="/" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Home</a>
-                <div class="border-t border-white/10 pt-2 mt-2">
-                    <p class="text-gold text-xs uppercase tracking-wider mb-2 px-2">Intake Forms</p>
-                    <a href="/federal-readiness.html" class="block px-2 py-2 text-gold">Federal Contracting Readiness</a>
-                    <a href="/apex-roadmap.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">APEX Roadmap</a>
-                    <a href="/sub-to-prime.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Sub-to-Prime Transition</a>
-                </div>
-                <a href="/intelligence.html" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Intelligence</a>
-                <a href="/#services" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Services</a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    <!-- END SECTION: Navigation -->
 
     <main>
-        <!-- Hero with Background Image -->
-        <section class="relative min-h-[40vh] flex items-center justify-center bg-center bg-cover" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.7)), url('/hero-patriotic.webp.png');">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-                <h1 class="text-4xl sm:text-5xl font-bold font-serif text-gold mb-4">
-                    Federal Contracting Readiness
-                </h1>
-                <p class="text-lg text-white/90">
-                    Assess your organization's maturity and operational resilience for the federal marketplace.
-                </p>
+        <!-- START SECTION: Hero -->
+        <section class="hero" aria-labelledby="diagnostic-hero-heading">
+            <div class="hero-content">
+                <h1 id="diagnostic-hero-heading">Federal Bidding <span>Readiness Form</span></h1>
+                <p>Validate your readiness for federal contracting with targeted assessment</p>
             </div>
         </section>
+        <!-- END SECTION: Hero -->
 
-        <!-- Form Section -->
-        <section class="py-20 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <form name="federal-readiness" method="POST" data-netlify="true" action="/thank-you.html" class="flex flex-col gap-6">
-                    <input type="hidden" name="form-name" value="federal-readiness">
-                    
-                    <!-- 1. Governance -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Is your organizational structure fully optimized for federal governance and oversight?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="governance" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="governance" value="no" class="text-gold focus:ring-gold">
-                                <span>No</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="governance" value="refining" class="text-gold focus:ring-gold">
-                                <span>Currently Refining</span>
-                            </label>
+        <!-- START SECTION: Diagnostic Form -->
+        <section class="section" aria-labelledby="diagnostic-form-heading">
+            <div class="container">
+                <h2 id="diagnostic-form-heading" class="section-title">Readiness Validation</h2>
+                <p class="section-subtitle">Prepare for your first federal bids through comprehensive readiness checks</p>
+                
+                <form id="federalDiagnosticForm" aria-label="Federal Bidding Readiness Form">
+                    <!-- Card 1: SAM.gov Registration -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Registration Status</h3>
+                        <fieldset>
+                            <legend>SAM.gov Registration</legend>
+                            <div class="form-group">
+                                <label for="sam-status">Current Status</label>
+                                <select id="sam-status" name="sam-status" required>
+                                    <option value="">Select status</option>
+                                    <option value="active">Active</option>
+                                    <option value="in-progress">In Progress</option>
+                                    <option value="expired">Expired</option>
+                                    <option value="not-started">Not Started</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="uei">Unique Entity ID (UEI)</label>
+                                <input type="text" id="uei" name="uei" placeholder="12-character UEI">
+                            </div>
+                            <div class="form-group">
+                                <label for="cage-code">CAGE Code</label>
+                                <input type="text" id="cage-code" name="cage-code" placeholder="5-character CAGE Code">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 2: DSBS Profile -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">DSBS Profile</h3>
+                        <fieldset>
+                            <legend>Dynamic Small Business Search Profile</legend>
+                            <div class="form-group">
+                                <label for="dsbs-status">Profile Status</label>
+                                <select id="dsbs-status" name="dsbs-status" required>
+                                    <option value="">Select status</option>
+                                    <option value="complete">Complete & Active</option>
+                                    <option value="incomplete">Incomplete</option>
+                                    <option value="not-started">Not Started</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dsbs-link">DSBS Profile Link (if available)</label>
+                                <input type="url" id="dsbs-link" name="dsbs-link" placeholder="https://dsbs.sba.gov/...">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 3: Capabilities Statement -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Capability Package</h3>
+                        <div class="form-group">
+                            <label for="capabilities-statement">Do you have a current Capabilities Statement?</label>
+                            <select id="capabilities-statement" name="capabilities-statement" required>
+                                <option value="">Select option</option>
+                                <option value="yes-current">Yes, current version</option>
+                                <option value="yes-outdated">Yes, needs updating</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="capabilities-link">Link or Upload Location (if available)</label>
+                            <input type="text" id="capabilities-link" name="capabilities-link" placeholder="URL or file location">
                         </div>
                     </div>
 
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Do you have an established Board of Advisors or a dedicated executive lead for federal growth?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="board" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="board" value="no" class="text-gold focus:ring-gold">
-                                <span>No</span>
-                            </label>
+                    <!-- Card 4: Accounting System -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Compliance Infrastructure</h3>
+                        <fieldset>
+                            <legend>Accounting System Compliance (DCAA)</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="dcaa-status" value="yes" required>
+                                    Yes, DCAA compliant
+                                </label>
+                                <label>
+                                    <input type="radio" name="dcaa-status" value="in-progress">
+                                    In Progress
+                                </label>
+                                <label>
+                                    <input type="radio" name="dcaa-status" value="not-sure">
+                                    Not Sure
+                                </label>
+                                <label>
+                                    <input type="radio" name="dcaa-status" value="no">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="accounting-notes">Additional Notes</label>
+                                <textarea id="accounting-notes" name="accounting-notes" rows="3" placeholder="Describe your current accounting system"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 5: Bonding Capacity -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Bonding Capacity</h3>
+                        <div class="form-group">
+                            <label for="single-bond">Single Project Bond Capacity</label>
+                            <select id="single-bond" name="single-bond">
+                                <option value="">Select capacity</option>
+                                <option value="under-500k">Under $500K</option>
+                                <option value="500k-1m">$500K - $1M</option>
+                                <option value="1m-5m">$1M - $5M</option>
+                                <option value="5m-10m">$5M - $10M</option>
+                                <option value="over-10m">Over $10M</option>
+                                <option value="na">Not Applicable</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="aggregate-bond">Aggregate Bond Capacity</label>
+                            <select id="aggregate-bond" name="aggregate-bond">
+                                <option value="">Select capacity</option>
+                                <option value="under-1m">Under $1M</option>
+                                <option value="1m-5m">$1M - $5M</option>
+                                <option value="5m-10m">$5M - $10M</option>
+                                <option value="10m-25m">$10M - $25M</option>
+                                <option value="over-25m">Over $25M</option>
+                                <option value="na">Not Applicable</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bonding-notes">Bonding Notes</label>
+                            <textarea id="bonding-notes" name="bonding-notes" rows="3"></textarea>
                         </div>
                     </div>
 
-                    <!-- 2. Financial Resilience -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Does your current financial position support the sustained operational requirements of multi-year federal engagements?
-                        </label>
-                        <select name="financial-resilience" required class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                            <option value="">Select Resilience Level</option>
-                            <option value="high">High Resilience (Self-Sustaining)</option>
-                            <option value="moderate">Moderate (Requires Performance-Based Payments)</option>
-                            <option value="early">Early Stage (Scaling Capital Required)</option>
-                        </select>
+                    <!-- Card 6: Facility Security Clearance -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Security Clearances</h3>
+                        <fieldset>
+                            <legend>Facility Security Clearance (FCL) Status</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="fcl-status" value="yes" required>
+                                    Yes, have FCL
+                                </label>
+                                <label>
+                                    <input type="radio" name="fcl-status" value="in-process">
+                                    In Process
+                                </label>
+                                <label>
+                                    <input type="radio" name="fcl-status" value="partnering">
+                                    Partnering with cleared entity
+                                </label>
+                                <label>
+                                    <input type="radio" name="fcl-status" value="no">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="clearance-level">If yes, clearance level and notes</label>
+                                <textarea id="clearance-level" name="clearance-level" rows="3" placeholder="e.g., Secret, Top Secret"></textarea>
+                            </div>
+                        </fieldset>
                     </div>
 
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Are your internal accounting systems capable of the rigorous transparency required for federal auditing?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="accounting" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="accounting" value="no" class="text-gold focus:ring-gold">
-                                <span>No</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="accounting" value="transition" class="text-gold focus:ring-gold">
-                                <span>In-Transition</span>
-                            </label>
+                    <!-- Card 7: Cyber Security Compliance -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Cyber Security</h3>
+                        <fieldset>
+                            <legend>CMMC Readiness Level</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="cmmc-readiness" value="not-started" required>
+                                    Not Started
+                                </label>
+                                <label>
+                                    <input type="radio" name="cmmc-readiness" value="level-1">
+                                    Level 1
+                                </label>
+                                <label>
+                                    <input type="radio" name="cmmc-readiness" value="level-2-progress">
+                                    Level 2 (In Progress)
+                                </label>
+                                <label>
+                                    <input type="radio" name="cmmc-readiness" value="level-2-ready">
+                                    Level 2 (Ready)
+                                </label>
+                                <label>
+                                    <input type="radio" name="cmmc-readiness" value="other">
+                                    Other
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="cyber-notes">Cyber Security Notes</label>
+                                <textarea id="cyber-notes" name="cyber-notes" rows="3" placeholder="Describe your cyber security posture"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 8: Teaming Experience -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Teaming & Subcontracting</h3>
+                        <div class="form-group">
+                            <label for="teaming-experience">Describe your teaming and subcontracting experience</label>
+                            <textarea id="teaming-experience" name="teaming-experience" rows="5" placeholder="Include prime/sub roles, agencies/customers, and brief summary of work performed" required></textarea>
                         </div>
                     </div>
 
-                    <!-- 3. Operational Maturity -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Can you demonstrate a documented trajectory of excellence in your core domain over the last 24-36 months?
-                        </label>
-                        <textarea name="performance-trajectory" rows="3" required placeholder="Summarize your performance trajectory..." class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                    <!-- Submit Button -->
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="submit-btn">Submit for Readiness Analysis</button>
                     </div>
-
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            What is the maximum scale of operation your team is currently equipped to deploy?
-                        </label>
-                        <input type="text" name="max-scale" required placeholder="e.g., $5M+ Annual Contract Value / 50+ Personnel" class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                    </div>
-
-                    <!-- 4. Technical Architecture -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Has your digital infrastructure been hardened to meet current government data protection mandates?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="security" value="compliant" required class="text-gold focus:ring-gold">
-                                <span>Fully Compliant</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="security" value="evaluating" class="text-gold focus:ring-gold">
-                                <span>Evaluating</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="security" value="started" class="text-gold focus:ring-gold">
-                                <span>Strategy Initiated</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Does your staff possess the necessary clearances to operate within restricted federal environments?
-                        </label>
-                        <div class="flex flex-col gap-3">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="clearances[]" value="secret" class="text-gold focus:ring-gold rounded">
-                                <span>Secret</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="clearances[]" value="ts" class="text-gold focus:ring-gold rounded">
-                                <span>Top Secret</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="clearances[]" value="tssci" class="text-gold focus:ring-gold rounded">
-                                <span>TS/SCI</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="clearances[]" value="none" class="text-gold focus:ring-gold rounded">
-                                <span>None at present</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- 5. Market Intelligence -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Have you identified the specific federal missions where your solution offers a clear competitive advantage?
-                        </label>
-                        <input type="text" name="competitive-advantage" required placeholder="e.g., Tactical Logistics, Patient Experience, AI/ML Infrastructure" class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                    </div>
-
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Are you prepared to invest the necessary 12-18 months of capture management to secure a prime position?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="timeline" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes, we are committed.</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="timeline" value="need-strategy" class="text-gold focus:ring-gold">
-                                <span>We require a strategic roadmap.</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gold text-obsidian font-bold py-4 px-6 rounded-lg hover:bg-gold/90 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all uppercase tracking-wider">
-                        Confirm Readiness Profile
-                    </button>
                 </form>
             </div>
         </section>
+        <!-- END SECTION: Diagnostic Form -->
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm">
-                &copy; 2026 Black Orchid Business Group. All rights reserved.
-            </p>
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm mt-2">
-                Intelligence. Strategy. Access.
-            </p>
+    <!-- START SECTION: Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p>Strategic Intelligence & Government Contracting Excellence</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+                </div>
+            </div>
         </div>
     </footer>
+    <!-- END SECTION: Footer -->
 
-    <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
-
-        themeToggle.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            html.classList.remove('dark');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
-
-        // Mobile Menu
-        document.getElementById('mobileMenuToggle').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-    </script>
+    <script src="/js/dark-mode.js"></script>
+    <script src="/js/federal-diagnostic-form.js"></script>
 </body>
 </html>
