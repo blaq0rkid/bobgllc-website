@@ -3,122 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article | BOBG LLC</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .article-header {
-            padding: 60px 20px 40px;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            border-bottom: 2px solid var(--accent-color, #00ff00);
-        }
-
-        .article-header h1 {
-            font-size: 2.5rem;
-            color: var(--accent-color, #00ff00);
-            margin-bottom: 20px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .article-meta {
-            color: #888;
-            font-size: 1rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .article-body {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            line-height: 1.8;
-        }
-
-        .article-body h2 {
-            color: var(--accent-color, #00ff00);
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        .article-body p {
-            margin-bottom: 20px;
-            color: var(--text-color, #ccc);
-        }
-
-        .article-body ul, .article-body ol {
-            margin-bottom: 20px;
-            padding-left: 40px;
-        }
-
-        .article-body li {
-            margin-bottom: 10px;
-            color: var(--text-color, #ccc);
-        }
-
-        .article-body a {
-            color: var(--accent-color, #00ff00);
-            text-decoration: underline;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: var(--accent-color, #00ff00);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Article Title | Black Orchid Business Group</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- START SECTION: Navigation -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">BOBG LLC</div>
+                <div class="logo-container">
+                    <img src="../logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
+                    <div class="logo-text">Black Orchid Business Group</div>
+                </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../apex-roadmap.html">APEX Roadmap</a></li>
+                    <li><a href="../federal-diagnostic.html">Federal Diagnostic</a></li>
+                    <li><a href="../intelligence.html" class="active">Intelligence</a></li>
                 </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+                    <span class="toggle-icon">☀️</span>
                 </button>
             </div>
         </nav>
     </header>
+    <!-- END SECTION: Navigation -->
 
     <main>
-        <div class="article-header">
-            <div class="container">
-                <h1 id="article-title">Loading...</h1>
-                <div class="article-meta">
-                    <span id="article-date"></span>
+        <a href="../intelligence.html" class="back-link" style="display: inline-block; padding: 20px 40px;">← Back to Intelligence Library</a>
+
+        <!-- START SECTION: Magazine Layout -->
+        <article class="magazine-layout" aria-labelledby="article-title">
+            <div class="magazine-media">
+                <img src="https://cdn.marblism.com/5DxQECTU4mZ.webp" alt="Featured image for article">
+                <p class="magazine-caption">Strategic visualization of federal proposal management framework</p>
+            </div>
+
+            <div class="magazine-content">
+                <header>
+                    <h1 id="article-title">The Ultimate Guide to Federal Proposal Management</h1>
+                    <p class="publish-date">Published: March 10, 2026</p>
+                </header>
+
+                <p>Stop paying the 30% Middleman Tax. Master the art of federal proposal management and take control of your government contracting success.</p>
+
+                <h2>The Hidden Cost of Outsourcing</h2>
+                <p>Many small to mid-sized businesses rely on proposal writing firms to handle their federal bids, paying premium fees—often 20-30% of the contract value—for services they could manage internally with the right framework and tools.</p>
+
+                <p>While external expertise has its place, building internal capability delivers sustainable competitive advantage. This guide provides the strategic framework to develop that capability.</p>
+
+                <h2>The Five Pillars of Proposal Excellence</h2>
+
+                <h3>1. Opportunity Qualification</h3>
+                <p>Not every opportunity is worth pursuing. Strategic qualification prevents wasted resources on low-probability bids. Key criteria include:</p>
+                <ul>
+                    <li>Alignment with core capabilities and past performance</li>
+                    <li>Realistic probability of win based on competitive landscape</li>
+                    <li>Adequate resources and timeline for compliant submission</li>
+                    <li>Strategic value beyond immediate revenue</li>
+                </ul>
+
+                <h3>2. Compliance Infrastructure</h3>
+                <p>Compliance is the floor, not the ceiling. Every proposal must meet baseline requirements:</p>
+                <ul>
+                    <li>Complete response to all solicitation requirements</li>
+                    <li>Proper formatting, page limits, and submission protocols</li>
+                    <li>Required certifications and documentation</li>
+                    <li>Timely submission through appropriate channels</li>
+                </ul>
+
+                <h3>3. Technical Approach</h3>
+                <p>Your technical solution must demonstrate deep understanding of the requirement and proven capability to deliver. This requires:</p>
+                <ul>
+                    <li>Clear articulation of methodology and approach</li>
+                    <li>Evidence of past performance on similar work</li>
+                    <li>Risk mitigation strategies</li>
+                    <li>Innovation where appropriate</li>
+                </ul>
+
+                <h3>4. Management Plan</h3>
+                <p>Agencies need confidence in your ability to execute. Your management plan should address:</p>
+                <ul>
+                    <li>Project organization and staffing</li>
+                    <li>Quality assurance and control processes</li>
+                    <li>Communication and reporting protocols</li>
+                    <li>Schedule management and milestone tracking</li>
+                </ul>
+
+                <h3>5. Price Strategy</h3>
+                <p>Competitive pricing balanced with realistic costs and reasonable profit. Consider:</p>
+                <ul>
+                    <li>Total cost of performance including all direct and indirect costs</li>
+                    <li>Competitive positioning relative to market rates</li>
+                    <li>Value proposition justifying your pricing</li>
+                    <li>Compliance with pricing requirements and formats</li>
+                </ul>
+
+                <h2>Building Internal Capability</h2>
+                <p>Developing proposal management capability requires investment in three areas:</p>
+
+                <p><strong>People:</strong> Train your team on federal procurement processes, proposal development, and compliance requirements. Designate a proposal manager who owns the process.</p>
+
+                <p><strong>Process:</strong> Establish repeatable workflows for opportunity qualification, capture planning, proposal development, and quality review. Document lessons learned.</p>
+
+                <p><strong>Tools:</strong> Invest in proposal development tools, compliance tracking systems, and content management databases to improve efficiency and quality.</p>
+
+                <h2>The Path Forward</h2>
+                <p>Transitioning from external dependence to internal capability doesn't happen overnight. Start with smaller opportunities, build your process, and scale as you gain confidence and capability.</p>
+
+                <p>The investment in building this capability pays dividends through improved win rates, reduced costs, and sustainable competitive advantage in the federal marketplace.</p>
+            </div>
+        </article>
+        <!-- END SECTION: Magazine Layout -->
+    </main>
+
+    <!-- START SECTION: Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p>Strategic Intelligence & Government Contracting Excellence</p>
+                <div class="footer-legal">
+                    <a href="../privacy.html">Privacy</a> | <a href="../terms.html">Terms</a>
                 </div>
             </div>
         </div>
-
-        <div class="article-body">
-            <a href="intelligence.html" class="back-link">← Back to Intelligence</a>
-            <div id="article-content">
-                <p>Loading article...</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 BOBG LLC. All rights reserved.</p>
-            <p>Strategic Intelligence & Government Contracting Solutions</p>
-        </div>
     </footer>
+    <!-- END SECTION: Footer -->
 
-    <script src="/js/dark-mode.js"></script>
-    <script src="/js/article-display.js"></script>
+    <script src="../js/dark-mode.js"></script>
 </body>
 </html>
