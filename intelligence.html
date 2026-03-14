@@ -3,56 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelligence Operations | BOBG LLC</title>
+    <title>Intelligence Library | Black Orchid Business Group</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- START SECTION: Navigation -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">Black Orchid Business Group</div>
+                <div class="logo-container">
+                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
+                    <div class="logo-text">Black Orchid Business Group</div>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="intelligence.html" class="active">Intelligence</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="apex-roadmap.html">APEX Roadmap</a></li>
+                    <li><a href="federal-diagnostic.html">Federal Diagnostic</a></li>
+                    <li><a href="intelligence.html" class="active">Intelligence</a></li>
                 </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+                    <span class="toggle-icon">☀️</span>
                 </button>
             </div>
         </nav>
     </header>
+    <!-- END SECTION: Navigation -->
 
     <main>
-        <section class="hero">
+        <!-- START SECTION: Hero -->
+        <section class="hero" aria-labelledby="intelligence-hero-heading">
             <div class="hero-content">
-                <h1>Intelligence Operations</h1>
-                <p>Strategic insights and analysis for government contractors navigating the federal marketplace. Stay informed with our latest intelligence briefings on compliance, procurement, and market positioning.</p>
+                <h1 id="intelligence-hero-heading">Intelligence <span>Library</span></h1>
+                <p>Strategic insights and analysis for government contracting excellence</p>
             </div>
         </section>
+        <!-- END SECTION: Hero -->
 
-        <section class="articles-section">
+        <!-- START SECTION: Articles Grid -->
+        <section class="section" aria-labelledby="articles-heading">
             <div class="container">
-                <div id="articles-container" class="articles-grid">
-                    <div class="loading-message">Loading intelligence articles...</div>
-                </div>
+                <h2 id="articles-heading" class="section-title">Strategic Intelligence</h2>
+                <p class="section-subtitle">Deep analysis on government contracting operations</p>
+                
+                <ul role="list" class="card-grid" style="list-style: none;">
+                    <!-- Article 1 -->
+                    <li>
+                        <a href="intelligence/ultimate-guide-federal-proposal-management.html" class="article-card" style="text-decoration: none; display: block;">
+                            <div class="article-thumbnail">
+                                <img src="https://cdn.marblism.com/5DxQECTU4mZ.webp" alt="Abstract gold-on-black graphic for The Ultimate Guide to Federal Proposal Management">
+                            </div>
+                            <div class="article-content">
+                                <h3>The Ultimate Guide to Federal Proposal Management</h3>
+                                <p class="article-excerpt">Stop paying the 30% Middleman Tax...</p>
+                                <span class="read-more">Read Full Analysis →</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Article 2 -->
+                    <li>
+                        <a href="intelligence/architecture-of-a-prime.html" class="article-card" style="text-decoration: none; display: block;">
+                            <div class="article-thumbnail">
+                                <img src="https://cdn.marblism.com/LHG1G71YZxl.webp" alt="Strategic framework visualization for The Architecture of a Prime">
+                            </div>
+                            <div class="article-content">
+                                <h3>The Architecture of a Prime</h3>
+                                <p class="article-excerpt">Building the infrastructure to compete as a primary contractor in the federal marketplace.</p>
+                                <span class="read-more">Read Full Analysis →</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Article 3 -->
+                    <li>
+                        <a href="intelligence/dsbs-is-now-sbs.html" class="article-card" style="text-decoration: none; display: block;">
+                            <div class="article-thumbnail">
+                                <img src="https://cdn.marblism.com/j0xk2soH4jR.webp" alt="System transition graphic for DSBS to SBS">
+                            </div>
+                            <div class="article-content">
+                                <h3>DSBS Is Now SBS</h3>
+                                <p class="article-excerpt">Understanding the transition and what it means for small business contractors.</p>
+                                <span class="read-more">Read Full Analysis →</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Article 4 -->
+                    <li>
+                        <a href="intelligence/ifb-intelligence-report.html" class="article-card" style="text-decoration: none; display: block;">
+                            <div class="article-thumbnail">
+                                <img src="https://cdn.marblism.com/g0N-aUOuxDY.webp" alt="Data analysis visualization for IFB Intelligence Report">
+                            </div>
+                            <div class="article-content">
+                                <h3>IFB Intelligence Report</h3>
+                                <p class="article-excerpt">Strategic analysis of Invitation for Bid opportunities and winning strategies.</p>
+                                <span class="read-more">Read Full Analysis →</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Article 5 -->
+                    <li>
+                        <a href="intelligence/sam-gov-registration-guide.html" class="article-card" style="text-decoration: none; display: block;">
+                            <div class="article-thumbnail">
+                                <img src="https://cdn.marblism.com/rk-lQIjhLBe.webp" alt="Registration process graphic for SAM.gov Guide">
+                            </div>
+                            <div class="article-content">
+                                <h3>The No-Stress Guide to SAM.gov Registration</h3>
+                                <p class="article-excerpt">Step-by-step guidance for navigating the federal registration process with confidence.</p>
+                                <span class="read-more">Read Full Analysis →</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
+        <!-- END SECTION: Articles Grid -->
     </main>
 
+    <!-- START SECTION: Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Black Orchid Business Group. All rights reserved.</p>
-            <p>Strategic Intelligence & Government Contracting Solutions</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p>Strategic Intelligence & Government Contracting Excellence</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
+    <!-- END SECTION: Footer -->
 
     <script src="/js/dark-mode.js"></script>
-    <script src="/js/article-loader.js"></script>
 </body>
 </html>
