@@ -1,7 +1,6 @@
 
-// Article configuration - add your article filenames here
+// Article configuration - your actual article filenames
 const articles = [
-    // Replace these with your actual article filenames
     'how-to-integrate-ai-with-federal-proposal-management-without-risking-a-compliance-fail.md',
     'is-the-middleman-tax-killing-your-govcon-margins.md',
     'middleman-tax-secrets.md',
