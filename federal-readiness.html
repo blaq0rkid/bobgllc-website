@@ -3,277 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Federal Bidding Readiness | Black Orchid Business Group</title>
+    <title>Federal Diagnostic | Black Orchid Business Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- START SECTION: Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo-container">
-                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
-                    <div class="logo-text">Black Orchid Business Group</div>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="BOBG Logo" class="logo-image">
+        <div class="logo-text">BOBG</div>
+    </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="apex-roadmap.html">APEX ROADMAP</a>
+        <a href="federal-diagnostic.html" class="active">FEDERAL DIAGNOSTIC</a>
+        <a href="sub-to-prime.html">SUB-TO-PRIME</a>
+        <a href="intelligence.html">INTELLIGENCE</a>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+            <span class="toggle-icon">☀️</span>
+        </button>
+    </nav>
+</header>
+
+<section class="hero" aria-labelledby="diagnostic-heading">
+    <div class="hero-content">
+        <h1 id="diagnostic-heading">Federal Bidding Readiness Diagnostic</h1>
+        <p>Validate your readiness for federal contracting with targeted precision assessment</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="card">
+        <h2>Readiness Validation Framework</h2>
+        <p style="color: var(--text-dim); margin-bottom: 3rem;">
+            Strategic assessment of your federal contracting infrastructure and operational maturity
+        </p>
+
+        <form id="federalDiagnosticForm" class="form-cards-container">
+            
+            <!-- Card 1: Governance Layer -->
+            <div class="form-card">
+                <h3>The Governance Layer (Foundation)</h3>
+                <div class="form-group">
+                    <label>Is your organizational structure fully optimized for federal governance and oversight?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="governance-structure" value="yes" required> Yes, fully optimized</label>
+                        <label class="radio-item"><input type="radio" name="governance-structure" value="in-progress"> In progress</label>
+                        <label class="radio-item"><input type="radio" name="governance-structure" value="no"> Requires development</label>
+                    </div>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="apex-roadmap.html">APEX Roadmap</a></li>
-                    <li><a href="federal-diagnostic.html" class="active">Federal Diagnostic</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
-                </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
-                    <span class="toggle-icon">☀️</span>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <!-- END SECTION: Navigation -->
-
-    <main>
-        <!-- START SECTION: Hero -->
-        <section class="hero" aria-labelledby="diagnostic-hero-heading">
-            <div class="hero-content">
-                <h1 id="diagnostic-hero-heading">Federal Bidding <span>Readiness Form</span></h1>
-                <p>Validate your readiness for federal contracting with targeted assessment</p>
-            </div>
-        </section>
-        <!-- END SECTION: Hero -->
-
-        <!-- START SECTION: Diagnostic Form -->
-        <section class="section" aria-labelledby="diagnostic-form-heading">
-            <div class="container">
-                <h2 id="diagnostic-form-heading" class="section-title">Readiness Validation</h2>
-                <p class="section-subtitle">Prepare for your first federal bids through comprehensive readiness checks</p>
-                
-                <form id="federalDiagnosticForm" aria-label="Federal Bidding Readiness Form">
-                    <!-- Card 1: SAM.gov Registration -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Registration Status</h3>
-                        <fieldset>
-                            <legend>SAM.gov Registration</legend>
-                            <div class="form-group">
-                                <label for="sam-status">Current Status</label>
-                                <select id="sam-status" name="sam-status" required>
-                                    <option value="">Select status</option>
-                                    <option value="active">Active</option>
-                                    <option value="in-progress">In Progress</option>
-                                    <option value="expired">Expired</option>
-                                    <option value="not-started">Not Started</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="uei">Unique Entity ID (UEI)</label>
-                                <input type="text" id="uei" name="uei" placeholder="12-character UEI">
-                            </div>
-                            <div class="form-group">
-                                <label for="cage-code">CAGE Code</label>
-                                <input type="text" id="cage-code" name="cage-code" placeholder="5-character CAGE Code">
-                            </div>
-                        </fieldset>
+                <div class="form-group">
+                    <label>Do you have an established Board of Advisors or a dedicated executive lead for federal growth?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="advisory-board" value="yes" required> Yes, established</label>
+                        <label class="radio-item"><input type="radio" name="advisory-board" value="partial"> Executive lead only</label>
+                        <label class="radio-item"><input type="radio" name="advisory-board" value="no"> Not yet established</label>
                     </div>
-
-                    <!-- Card 2: DSBS Profile -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">DSBS Profile</h3>
-                        <fieldset>
-                            <legend>Dynamic Small Business Search Profile</legend>
-                            <div class="form-group">
-                                <label for="dsbs-status">Profile Status</label>
-                                <select id="dsbs-status" name="dsbs-status" required>
-                                    <option value="">Select status</option>
-                                    <option value="complete">Complete & Active</option>
-                                    <option value="incomplete">Incomplete</option>
-                                    <option value="not-started">Not Started</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="dsbs-link">DSBS Profile Link (if available)</label>
-                                <input type="url" id="dsbs-link" name="dsbs-link" placeholder="https://dsbs.sba.gov/...">
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 3: Capabilities Statement -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Capability Package</h3>
-                        <div class="form-group">
-                            <label for="capabilities-statement">Do you have a current Capabilities Statement?</label>
-                            <select id="capabilities-statement" name="capabilities-statement" required>
-                                <option value="">Select option</option>
-                                <option value="yes-current">Yes, current version</option>
-                                <option value="yes-outdated">Yes, needs updating</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="capabilities-link">Link or Upload Location (if available)</label>
-                            <input type="text" id="capabilities-link" name="capabilities-link" placeholder="URL or file location">
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Accounting System -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Compliance Infrastructure</h3>
-                        <fieldset>
-                            <legend>Accounting System Compliance (DCAA)</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="dcaa-status" value="yes" required>
-                                    Yes, DCAA compliant
-                                </label>
-                                <label>
-                                    <input type="radio" name="dcaa-status" value="in-progress">
-                                    In Progress
-                                </label>
-                                <label>
-                                    <input type="radio" name="dcaa-status" value="not-sure">
-                                    Not Sure
-                                </label>
-                                <label>
-                                    <input type="radio" name="dcaa-status" value="no">
-                                    No
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label for="accounting-notes">Additional Notes</label>
-                                <textarea id="accounting-notes" name="accounting-notes" rows="3" placeholder="Describe your current accounting system"></textarea>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 5: Bonding Capacity -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Bonding Capacity</h3>
-                        <div class="form-group">
-                            <label for="single-bond">Single Project Bond Capacity</label>
-                            <select id="single-bond" name="single-bond">
-                                <option value="">Select capacity</option>
-                                <option value="under-500k">Under $500K</option>
-                                <option value="500k-1m">$500K - $1M</option>
-                                <option value="1m-5m">$1M - $5M</option>
-                                <option value="5m-10m">$5M - $10M</option>
-                                <option value="over-10m">Over $10M</option>
-                                <option value="na">Not Applicable</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="aggregate-bond">Aggregate Bond Capacity</label>
-                            <select id="aggregate-bond" name="aggregate-bond">
-                                <option value="">Select capacity</option>
-                                <option value="under-1m">Under $1M</option>
-                                <option value="1m-5m">$1M - $5M</option>
-                                <option value="5m-10m">$5M - $10M</option>
-                                <option value="10m-25m">$10M - $25M</option>
-                                <option value="over-25m">Over $25M</option>
-                                <option value="na">Not Applicable</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="bonding-notes">Bonding Notes</label>
-                            <textarea id="bonding-notes" name="bonding-notes" rows="3"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Facility Security Clearance -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Security Clearances</h3>
-                        <fieldset>
-                            <legend>Facility Security Clearance (FCL) Status</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="fcl-status" value="yes" required>
-                                    Yes, have FCL
-                                </label>
-                                <label>
-                                    <input type="radio" name="fcl-status" value="in-process">
-                                    In Process
-                                </label>
-                                <label>
-                                    <input type="radio" name="fcl-status" value="partnering">
-                                    Partnering with cleared entity
-                                </label>
-                                <label>
-                                    <input type="radio" name="fcl-status" value="no">
-                                    No
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label for="clearance-level">If yes, clearance level and notes</label>
-                                <textarea id="clearance-level" name="clearance-level" rows="3" placeholder="e.g., Secret, Top Secret"></textarea>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 7: Cyber Security Compliance -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Cyber Security</h3>
-                        <fieldset>
-                            <legend>CMMC Readiness Level</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="cmmc-readiness" value="not-started" required>
-                                    Not Started
-                                </label>
-                                <label>
-                                    <input type="radio" name="cmmc-readiness" value="level-1">
-                                    Level 1
-                                </label>
-                                <label>
-                                    <input type="radio" name="cmmc-readiness" value="level-2-progress">
-                                    Level 2 (In Progress)
-                                </label>
-                                <label>
-                                    <input type="radio" name="cmmc-readiness" value="level-2-ready">
-                                    Level 2 (Ready)
-                                </label>
-                                <label>
-                                    <input type="radio" name="cmmc-readiness" value="other">
-                                    Other
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label for="cyber-notes">Cyber Security Notes</label>
-                                <textarea id="cyber-notes" name="cyber-notes" rows="3" placeholder="Describe your cyber security posture"></textarea>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 8: Teaming Experience -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Teaming & Subcontracting</h3>
-                        <div class="form-group">
-                            <label for="teaming-experience">Describe your teaming and subcontracting experience</label>
-                            <textarea id="teaming-experience" name="teaming-experience" rows="5" placeholder="Include prime/sub roles, agencies/customers, and brief summary of work performed" required></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div style="text-align: center; margin-top: 40px;">
-                        <button type="submit" class="submit-btn">Submit for Readiness Analysis</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <!-- END SECTION: Diagnostic Form -->
-    </main>
-
-    <!-- START SECTION: Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
-                <p>Strategic Intelligence & Government Contracting Excellence</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- END SECTION: Footer -->
 
-    <script src="/js/dark-mode.js"></script>
-    <script src="/js/federal-diagnostic-form.js"></script>
-    <script src="/js/form-handlers.js"></script>
+            <!-- Card 2: Financial Resilience -->
+            <div class="form-card">
+                <h3>Financial Resilience (The "Muscle")</h3>
+                <div class="form-group">
+                    <label>Does your current financial position support the sustained operational requirements of multi-year federal engagements?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="financial-position" value="yes" required> Yes, fully capable</label>
+                        <label class="radio-item"><input type="radio" name="financial-position" value="limited"> Limited capacity</label>
+                        <label class="radio-item"><input type="radio" name="financial-position" value="no"> Requires capital development</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Are your internal accounting systems capable of the rigorous transparency required for federal auditing (DCAA/DCMA standards)?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="accounting-systems" value="compliant" required> Fully compliant</label>
+                        <label class="radio-item"><input type="radio" name="accounting-systems" value="in-progress"> Implementation underway</label>
+                        <label class="radio-item"><input type="radio" name="accounting-systems" value="not-ready"> Not yet ready</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Operational Maturity -->
+            <div class="form-card">
+                <h3>Operational Maturity (Performance)</h3>
+                <div class="form-group">
+                    <label>Can you demonstrate a documented trajectory of excellence in your core domain over the last 24-36 months?</label>
+                    <textarea rows="4" name="performance-trajectory" placeholder="Describe your performance trajectory, key milestones, and validated outcomes..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>What is the maximum scale of operation your team is currently equipped to deploy without additional capital infusion?</label>
+                    <select name="operational-scale" required>
+                        <option value="">Select operational ceiling</option>
+                        <option value="under-500k">Under $500K</option>
+                        <option value="500k-2m">$500K - $2M</option>
+                        <option value="2m-5m">$2M - $5M</option>
+                        <option value="5m-10m">$5M - $10M</option>
+                        <option value="over-10m">Over $10M</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Card 4: Technical Architecture -->
+            <div class="form-card">
+                <h3>Technical Architecture (Security & Compliance)</h3>
+                <div class="form-group">
+                    <label>Has your digital infrastructure been hardened to meet current government data protection mandates (NIST/CMMC)?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="data-protection" value="compliant" required> Fully compliant</label>
+                        <label class="radio-item"><input type="radio" name="data-protection" value="in-progress"> Compliance in progress</label>
+                        <label class="radio-item"><input type="radio" name="data-protection" value="assessment-needed"> Assessment required</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Does your staff possess the necessary clearances to operate within restricted federal environments?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="staff-clearances" value="yes" required> Yes, cleared personnel</label>
+                        <label class="radio-item"><input type="radio" name="staff-clearances" value="partial"> Partial clearances</label>
+                        <label class="radio-item"><input type="radio" name="staff-clearances" value="no"> No clearances</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Market Intelligence -->
+            <div class="form-card">
+                <h3>Market Intelligence (Strategy)</h3>
+                <div class="form-group">
+                    <label>Have you identified the specific federal missions where your solution offers a clear competitive advantage?</label>
+                    <textarea rows="3" name="competitive-advantage" placeholder="Describe your identified missions and competitive positioning..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Are you prepared to invest the necessary 12-18 months of capture management to secure your first major federal prime position?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="investment-readiness" value="yes" required> Yes, fully committed</label>
+                        <label class="radio-item"><input type="radio" name="investment-readiness" value="conditional"> Conditionally prepared</label>
+                        <label class="radio-item"><input type="radio" name="investment-readiness" value="no"> Requires strategic planning</label>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn-gold">Submit Diagnostic Assessment</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Black Orchid Business Group LLC. All Rights Reserved.<br>
+    Intelligence. Strategy. Access.<br>
+    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
+
+<script src="js/dark-mode.js"></script>
+<script src="js/form-handlers.js"></script>
 </body>
 </html>
