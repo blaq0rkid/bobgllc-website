@@ -1,4 +1,3 @@
-
 // Article configuration - your actual article filenames
 const articles = [
     'how-to-integrate-ai-with-federal-proposal-management-without-risking-a-compliance-fail.md',
