@@ -2,14 +2,14 @@
 // Article configuration - add your article filenames here
 const articles = [
     // Replace these with your actual article filenames
-    'article-1.md',
-    'article-2.md',
-    'article-3.md',
-    'article-4.md',
-    'article-5.md',
-    'article-6.md',
-    'article-7.md',
-    'article-8.md'
+    'how-to-integrate-ai-with-federal-proposal-management-without-risking-a-compliance-fail.md',
+    'is-the-middleman-tax-killing-your-govcon-margins.md',
+    'middleman-tax-secrets.md',
+    'the-architecture-of-a-prime-agency-alignment-2026.md',
+    'the-black-orchid-agency-matching-matrix-5-factor-fit-score.md',
+    'the-gsa-trap-why-your-schedule-isnt-scaling-your-business-and-the-exit-plan.md',
+    'the-sub-to-prime-chasm-crossing-the-2m-positioning-gap.md',
+    'the-ultimate-guide-to-the-agency-matching-matrix.md'
 ];
 
 // Function to parse markdown frontmatter and content
