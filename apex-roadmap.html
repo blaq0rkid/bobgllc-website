@@ -1,370 +1,308 @@
-
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEX Roadmap | Black Orchid Business Group</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        obsidian: '#050505',
-                        gold: '#D4AF37',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .sliding-card {
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .sliding-card:hover, .sliding-card:focus-within {
-            transform: translateY(-4px);
-            border-color: #D4AF37;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-        .logo-invert {
-            transition: filter 0.3s ease;
-        }
-        html:not(.dark) .logo-invert {
-            filter: invert(1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-obsidian dark:bg-obsidian dark:text-white bg-white text-gray-900 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="bg-obsidian dark:bg-obsidian bg-white border-b border-white/10 dark:border-white/10 border-gray-200 sticky top-0 z-50" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-3">
-                        <img src="/logo.png" alt="Black Orchid Business Group Logo" class="h-10 w-auto logo-invert">
-                        <span class="text-xl font-bold font-serif text-gold tracking-wider hidden sm:block">BOBG</span>
-                    </a>
-                    <div class="hidden md:flex items-center gap-6">
-                        <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Home</a>
-                        
-                        <div class="relative group">
-                            <button class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1 flex items-center gap-1">
-                                Intake Forms <i class="fas fa-chevron-down text-xs"></i>
-                            </button>
-                            <div class="absolute left-0 mt-2 w-64 bg-obsidian dark:bg-obsidian bg-white border border-white/10 dark:border-white/10 border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                <a href="/federal-readiness.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Federal Contracting Readiness</a>
-                                <a href="/apex-roadmap.html" class="block px-4 py-3 text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">APEX Roadmap</a>
-                                <a href="/sub-to-prime.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Sub-to-Prime Transition</a>
-                            </div>
-                        </div>
-                        
-                        <a href="/intelligence.html" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Intelligence</a>
-                        <a href="/#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Services</a>
-                    </div>
+<body>
+    <!-- START SECTION: Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
+                    <div class="logo-text">Black Orchid Business Group</div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-moon" id="themeIcon"></i>
-                    </button>
-                    <button id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="apex-roadmap.html" class="active">APEX Roadmap</a></li>
+                    <li><a href="federal-diagnostic.html">Federal Diagnostic</a></li>
+                    <li><a href="intelligence.html">Intelligence</a></li>
+                </ul>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+                    <span class="toggle-icon">☀️</span>
+                </button>
             </div>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="px-4 py-4 flex flex-col gap-3">
-                <a href="/" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Home</a>
-                <div class="border-t border-white/10 pt-2 mt-2">
-                    <p class="text-gold text-xs uppercase tracking-wider mb-2 px-2">Intake Forms</p>
-                    <a href="/federal-readiness.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Federal Contracting Readiness</a>
-                    <a href="/apex-roadmap.html" class="block px-2 py-2 text-gold">APEX Roadmap</a>
-                    <a href="/sub-to-prime.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Sub-to-Prime Transition</a>
-                </div>
-                <a href="/intelligence.html" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Intelligence</a>
-                <a href="/#services" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Services</a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    <!-- END SECTION: Navigation -->
 
     <main>
-        <!-- Hero with Background Image -->
-        <section class="relative min-h-[40vh] flex items-center justify-center bg-center bg-cover" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.7)), url('/hero-patriotic.webp.png');">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-                <h1 class="text-4xl sm:text-5xl font-bold font-serif text-gold mb-4">
-                    APEX Roadmap Intake
-                </h1>
-                <p class="text-lg text-white/90">
-                    Provide the intelligence required to customize your path to mission success.
-                </p>
+        <!-- START SECTION: Hero -->
+        <section class="hero" aria-labelledby="apex-hero-heading">
+            <div class="hero-content">
+                <h1 id="apex-hero-heading">APEX Roadmap <span>Intake Form</span></h1>
+                <p>Accelerate your qualification and roadmap alignment with strategic precision</p>
             </div>
         </section>
+        <!-- END SECTION: Hero -->
 
-        <!-- Form Section -->
-        <section class="py-20 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <form name="apex-roadmap" method="POST" data-netlify="true" action="/thank-you.html" class="flex flex-col gap-6">
-                    <input type="hidden" name="form-name" value="apex-roadmap">
-                    
-                    <!-- 1. Federal Registration -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Is your organization currently recognized as a registered entity within the federal ecosystem?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="registration" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="registration" value="no" class="text-gold focus:ring-gold">
-                                <span>No</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="registration" value="in-progress" class="text-gold focus:ring-gold">
-                                <span>In-Progress</span>
-                            </label>
+        <!-- START SECTION: Intake Form -->
+        <section class="section" aria-labelledby="intake-form-heading">
+            <div class="container">
+                <h2 id="intake-form-heading" class="section-title">Strategic Alignment Assessment</h2>
+                <p class="section-subtitle">Help us understand your position to build your custom roadmap</p>
+                
+                <form id="apexIntakeForm" aria-label="APEX Roadmap Intake Form">
+                    <!-- Card 1: Federal Recognition -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Federal Ecosystem Recognition</h3>
+                        <fieldset>
+                            <legend>Is your organization currently recognized as a registered entity within the federal ecosystem?</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="federal-recognition" value="yes" required>
+                                    Yes
+                                </label>
+                                <label>
+                                    <input type="radio" name="federal-recognition" value="no">
+                                    No
+                                </label>
+                                <label>
+                                    <input type="radio" name="federal-recognition" value="in-progress">
+                                    In Progress
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 2: Strategic Designations -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Strategic Designations</h3>
+                        <fieldset>
+                            <legend>What strategic designations can we leverage to give you a competitive edge?</legend>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="designations" value="8a">
+                                    8(a) Business Development
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="designations" value="wosb">
+                                    WOSB (Women-Owned Small Business)
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="designations" value="edwosb">
+                                    EDWOSB (Economically Disadvantaged WOSB)
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="designations" value="sdvosb">
+                                    SDVOSB (Service-Disabled Veteran-Owned)
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="designations" value="hubzone">
+                                    HUBZone
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="designations" value="mbe-dbe">
+                                    MBE/DBE
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="designations" value="other">
+                                    Other
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 3: Domain Expertise -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Domain of Expertise</h3>
+                        <div class="form-group">
+                            <label for="domain-expertise">What is your primary domain of expertise where you deliver the most impact?</label>
+                            <input type="text" id="domain-expertise" name="domain-expertise" placeholder="e.g., IT Services, Professional Services, Construction" required>
                         </div>
                     </div>
 
-                    <!-- 2. Strategic Designations -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            What strategic designations can we leverage to give you a competitive edge?
-                        </label>
-                        <div class="flex flex-col gap-3">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="certifications[]" value="8a" class="text-gold focus:ring-gold rounded">
-                                <span>8(a)</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="certifications[]" value="wosb" class="text-gold focus:ring-gold rounded">
-                                <span>WOSB</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="certifications[]" value="hubzone" class="text-gold focus:ring-gold rounded">
-                                <span>HUBZone</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="checkbox" name="certifications[]" value="sdvosb" class="text-gold focus:ring-gold rounded">
-                                <span>SDVOSB</span>
-                            </label>
+                    <!-- Card 4: Growth Positioning -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Growth Positioning</h3>
+                        <div class="form-group">
+                            <label for="revenue-scale">Where are you currently positioned on the growth curve in terms of annual scale?</label>
+                            <select id="revenue-scale" name="revenue-scale" required>
+                                <option value="">Select revenue range</option>
+                                <option value="under-500k">Under $500K</option>
+                                <option value="500k-1m">$500K - $1M</option>
+                                <option value="1m-5m">$1M - $5M</option>
+                                <option value="5m-10m">$5M - $10M</option>
+                                <option value="10m-25m">$10M - $25M</option>
+                                <option value="over-25m">Over $25M</option>
+                            </select>
                         </div>
                     </div>
 
-                    <!-- 3. Primary Domain -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            What is your primary domain of expertise where you deliver the most impact?
-                        </label>
-                        <input type="text" name="primary-domain" required placeholder="e.g., Healthcare IT, Logistics, Cybersecurity" class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                    </div>
-
-                    <!-- 4. Growth Scale -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Where are you currently positioned on the growth curve in terms of annual scale?
-                        </label>
-                        <select name="growth-scale" required class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                            <option value="">Select Range</option>
-                            <option value="startup">Establishing Phase (< $1M)</option>
-                            <option value="growth">Scaling Phase ($1M - $10M)</option>
-                            <option value="established">Established Phase ($10M+)</option>
-                        </select>
-                    </div>
-
-                    <!-- 5. Complexity/Past Performance -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            What is the highest level of complexity your team has successfully managed to date?
-                        </label>
-                        <textarea name="complexity" rows="4" required placeholder="Briefly describe your most significant performance milestone." class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
-                    </div>
-
-                    <!-- 6. Prime vs Sub -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Are you looking to lead as a Prime contractor, or is your strategy focused on high-value subcontracting?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="prime-sub" value="prime" required class="text-gold focus:ring-gold">
-                                <span>Prime</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="prime-sub" value="sub" class="text-gold focus:ring-gold">
-                                <span>Subcontracting</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="prime-sub" value="both" class="text-gold focus:ring-gold">
-                                <span>Both</span>
-                            </label>
+                    <!-- Card 5: Past Performance -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Complexity Management</h3>
+                        <div class="form-group">
+                            <label for="past-performance">What is the highest level of complexity your team has successfully managed to date?</label>
+                            <textarea id="past-performance" name="past-performance" rows="5" placeholder="Describe your most significant contract: agency, scope, period of performance, contract value" required></textarea>
                         </div>
                     </div>
 
-                    <!-- 7. Security Clearance -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Does your organization hold the necessary clearances for restricted or sensitive government missions?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="fcl" value="none" required class="text-gold focus:ring-gold">
-                                <span>None</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="fcl" value="secret" class="text-gold focus:ring-gold">
-                                <span>Secret</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="fcl" value="top-secret" class="text-gold focus:ring-gold">
-                                <span>Top Secret</span>
-                            </label>
+                    <!-- Card 6: Prime vs Sub Strategy -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Contracting Strategy</h3>
+                        <fieldset>
+                            <legend>Are you looking to lead as a Prime contractor, or is your strategy focused on high-value subcontracting?</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="strategy" value="prime" required>
+                                    Prime Contractor
+                                </label>
+                                <label>
+                                    <input type="radio" name="strategy" value="sub">
+                                    Subcontractor
+                                </label>
+                                <label>
+                                    <input type="radio" name="strategy" value="both">
+                                    Both
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 7: Security Clearances -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Security Clearances</h3>
+                        <fieldset>
+                            <legend>Does your organization hold the necessary clearances for restricted or sensitive government missions?</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="clearances" value="none" required>
+                                    None
+                                </label>
+                                <label>
+                                    <input type="radio" name="clearances" value="secret">
+                                    Secret
+                                </label>
+                                <label>
+                                    <input type="radio" name="clearances" value="top-secret">
+                                    Top Secret
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 8: Financial Infrastructure -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Financial Infrastructure</h3>
+                        <fieldset>
+                            <legend>Is your financial infrastructure ready to meet the sophisticated accounting standards required for federal contracts?</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="financial-ready" value="yes" required>
+                                    Yes
+                                </label>
+                                <label>
+                                    <input type="radio" name="financial-ready" value="no">
+                                    No
+                                </label>
+                                <label>
+                                    <input type="radio" name="financial-ready" value="in-progress">
+                                    In Progress
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Card 9: Data Security Compliance -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Data Security Mandates</h3>
+                        <div class="form-group">
+                            <label for="cyber-compliance">Where do you stand on meeting the government's evolving data security and protection mandates?</label>
+                            <select id="cyber-compliance" name="cyber-compliance" required>
+                                <option value="">Select compliance level</option>
+                                <option value="not-started">Not Started</option>
+                                <option value="cmmc-level-1">CMMC Level 1</option>
+                                <option value="cmmc-level-2-progress">CMMC Level 2 (In Progress)</option>
+                                <option value="cmmc-level-2-ready">CMMC Level 2 (Ready)</option>
+                                <option value="nist-800-171">NIST 800-171 Compliant</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                     </div>
 
-                    <!-- 8. Financial Readiness -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Is your financial infrastructure ready to meet the sophisticated accounting standards required for federal contracts?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="dcaa" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="dcaa" value="no" class="text-gold focus:ring-gold">
-                                <span>No</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="dcaa" value="in-progress" class="text-gold focus:ring-gold">
-                                <span>In-Progress</span>
-                            </label>
+                    <!-- Card 10: Target Agencies -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Mission Alignment</h3>
+                        <div class="form-group">
+                            <label for="target-agencies">Which federal missions are most closely aligned with your organization's long-term goals?</label>
+                            <input type="text" id="target-agencies" name="target-agencies" placeholder="e.g., DoD, VA, DHS, HHS, GSA" required>
                         </div>
                     </div>
 
-                    <!-- 9. Data Security -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Where do you stand on meeting the government's evolving data security and protection mandates?
-                        </label>
-                        <select name="data-security" required class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                            <option value="">Select Status</option>
-                            <option value="compliant">Fully Compliant (CMMC/NIST)</option>
-                            <option value="gap-analysis">Gap Analysis Underway</option>
-                            <option value="not-started">Implementation Strategy Required</option>
-                        </select>
+                    <!-- Card 11: Execution Capacity -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Execution Capacity</h3>
+                        <fieldset>
+                            <legend>Do you have the internal bandwidth for high-stakes bid execution, or are you looking for a turnkey capture partner?</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="execution" value="in-house" required>
+                                    In-House
+                                </label>
+                                <label>
+                                    <input type="radio" name="execution" value="turnkey">
+                                    Turnkey
+                                </label>
+                                <label>
+                                    <input type="radio" name="execution" value="hybrid">
+                                    Hybrid
+                                </label>
+                            </div>
+                        </fieldset>
                     </div>
 
-                    <!-- 10. Missions/Agencies -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Which federal missions are most closely aligned with your organization's long-term goals?
-                        </label>
-                        <input type="text" name="missions" required placeholder="e.g., CMS Healthcare, DoD Modernization" class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
+                    <!-- Card 12: Geographic Focus -->
+                    <div class="form-section">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Operational Footprint</h3>
+                        <fieldset>
+                            <legend>Is your operational footprint focused on localized impact or nationwide deployment?</legend>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="geography" value="local" required>
+                                    Local
+                                </label>
+                                <label>
+                                    <input type="radio" name="geography" value="regional">
+                                    Regional
+                                </label>
+                                <label>
+                                    <input type="radio" name="geography" value="national">
+                                    National
+                                </label>
+                            </div>
+                        </fieldset>
                     </div>
 
-                    <!-- 11. Bandwidth -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Do you have the internal bandwidth for high-stakes bid execution, or are you looking for a turnkey capture partner?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="bandwidth" value="in-house" required class="text-gold focus:ring-gold">
-                                <span>In-house</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="bandwidth" value="turnkey" class="text-gold focus:ring-gold">
-                                <span>Turnkey Capture</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="bandwidth" value="hybrid" class="text-gold focus:ring-gold">
-                                <span>Hybrid Support</span>
-                            </label>
-                        </div>
+                    <!-- Submit Button -->
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="submit-btn">Submit for Analysis</button>
                     </div>
-
-                    <!-- 12. Footprint -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Is your operational footprint focused on localized impact or nationwide deployment?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="footprint" value="local" required class="text-gold focus:ring-gold">
-                                <span>Local</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="footprint" value="regional" class="text-gold focus:ring-gold">
-                                <span>Regional</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="footprint" value="national" class="text-gold focus:ring-gold">
-                                <span>National</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gold text-obsidian font-bold py-4 px-6 rounded-lg hover:bg-gold/90 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all uppercase tracking-wider">
-                        Initiate Roadmap Review
-                    </button>
                 </form>
             </div>
         </section>
+        <!-- END SECTION: Intake Form -->
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm">
-                &copy; 2026 Black Orchid Business Group. All rights reserved.
-            </p>
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm mt-2">
-                Intelligence. Strategy. Access.
-            </p>
+    <!-- START SECTION: Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p>Strategic Intelligence & Government Contracting Excellence</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+                </div>
+            </div>
         </div>
     </footer>
+    <!-- END SECTION: Footer -->
 
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
-
-        themeToggle.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            html.classList.remove('dark');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
-
-        document.getElementById('mobileMenuToggle').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-    </script>
+    <script src="/js/dark-mode.js"></script>
+    <script src="/js/apex-form.js"></script>
 </body>
 </html>
