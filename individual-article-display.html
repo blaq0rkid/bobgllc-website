@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | BOBG LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-header {
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border-bottom: 2px solid var(--accent-color, #00ff00);
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color, #00ff00);
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-meta {
+            color: #888;
+            font-size: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            color: var(--accent-color, #00ff00);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            color: var(--text-color, #ccc);
+        }
+
+        .article-body ul, .article-body ol {
+            margin-bottom: 20px;
+            padding-left: 40px;
+        }
+
+        .article-body li {
+            margin-bottom: 10px;
+            color: var(--text-color, #ccc);
+        }
+
+        .article-body a {
+            color: var(--accent-color, #00ff00);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #00ff00);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">BOBG LLC</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="intelligence.html">Intelligence</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="article-header">
+            <div class="container">
+                <h1 id="article-title">Loading...</h1>
+                <div class="article-meta">
+                    <span id="article-date"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <a href="intelligence.html" class="back-link">← Back to Intelligence</a>
+            <div id="article-content">
+                <p>Loading article...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 BOBG LLC. All rights reserved.</p>
+            <p>Strategic Intelligence & Government Contracting Solutions</p>
+        </div>
+    </footer>
+
+    <script src="/js/dark-mode.js"></script>
+    <script src="/js/article-display.js"></script>
+</body>
+</html>
