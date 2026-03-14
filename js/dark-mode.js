@@ -1,51 +1,45 @@
-// Dark mode functionality
-class DarkModeManager {
+// Dark Mode Toggle for Elite Obsidian
+class DarkModeToggle {
     constructor() {
-        this.darkMode = localStorage.getItem('darkMode') === 'enabled';
         this.toggle = document.getElementById('darkModeToggle');
+        this.icon = this.toggle?.querySelector('.toggle-icon');
+        // Default is dark mode (Elite Obsidian)
+        this.isDark = localStorage.getItem('theme') !== 'light';
         this.init();
     }
 
     init() {
-        // Apply saved preference
-        if (this.darkMode) {
-            this.enable();
+        // Apply saved theme or default to dark
+        if (this.isDark) {
+            document.body.classList.remove('light-mode');
+            if (this.icon) this.icon.textContent = '☀️';
         } else {
-            this.disable();
+            document.body.classList.add('light-mode');
+            if (this.icon) this.icon.textContent = '🌙';
         }
 
-        // Add click listener
+        // Add event listener
         if (this.toggle) {
-            this.toggle.addEventListener('click', () => {
-                if (this.darkMode) {
-                    this.disable();
-                } else {
-                    this.enable();
-                }
-            });
+            this.toggle.addEventListener('click', () => this.toggleTheme());
         }
     }
 
-    enable() {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-        this.darkMode = true;
-        if (this.toggle) {
-            this.toggle.querySelector('.toggle-icon').textContent = '☀️';
-        }
-    }
-
-    disable() {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-        this.darkMode = false;
-        if (this.toggle) {
-            this.toggle.querySelector('.toggle-icon').textContent = '🌙';
+    toggleTheme() {
+        this.isDark = !this.isDark;
+        
+        if (this.isDark) {
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
+            if (this.icon) this.icon.textContent = '☀️';
+        } else {
+            document.body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+            if (this.icon) this.icon.textContent = '🌙';
         }
     }
 }
 
-// Initialize dark mode when DOM is ready
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    new DarkModeManager();
+    new DarkModeToggle();
 });
