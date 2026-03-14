@@ -1,4 +1,3 @@
-
 // Simple markdown to HTML converter
 function markdownToHTML(markdown) {
     let html = markdown;
