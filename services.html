@@ -3,72 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Black Orchid Business Group</title>
+    <title>Our Expertise | Black Orchid Business Group</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- START SECTION: Navigation -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">Black Orchid Business Group</div>
+                <div class="logo-container">
+                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
+                    <div class="logo-text">Black Orchid Business Group</div>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="apex-roadmap.html">APEX Roadmap</a></li>
+                    <li><a href="federal-diagnostic.html">Federal Diagnostic</a></li>
+                    <li><a href="intelligence.html">Intelligence</a></li>
                 </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+                    <span class="toggle-icon">☀️</span>
                 </button>
             </div>
         </nav>
     </header>
+    <!-- END SECTION: Navigation -->
 
     <main>
-        <section class="hero">
+        <!-- START SECTION: Hero -->
+        <section class="hero" aria-labelledby="services-hero-heading">
             <div class="hero-content">
-                <h1>Our Services</h1>
-                <p>Comprehensive government contracting solutions tailored to your business needs</p>
+                <h1 id="services-hero-heading">Our <span>Expertise</span></h1>
+                <p>Comprehensive government contracting solutions tailored to your success</p>
             </div>
         </section>
+        <!-- END SECTION: Hero -->
 
-        <section class="section">
+        <!-- START SECTION: Services -->
+        <section class="section" aria-labelledby="services-heading">
             <div class="container">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h2>Government Contracting Advisory</h2>
-                        <p>Strategic guidance for navigating federal, state, county, and city contracting opportunities. We help you understand compliance requirements, position your business competitively, and develop winning strategies.</p>
+                <h2 id="services-heading" class="section-title">Strategic Services</h2>
+                <p class="section-subtitle">Excellence in every phase of government contracting</p>
+                
+                <div class="card-grid">
+                    <div class="sliding-card" tabindex="0">
+                        <h3>Market Research & Analysis</h3>
+                        <p>Deep-dive data to identify best-fit federal, state, and local opportunities—prioritizing bids you can realistically win. We analyze market trends, competitor positioning, and agency buying patterns to ensure you invest your resources wisely.</p>
                     </div>
 
-                    <div class="service-card">
-                        <h2>Market Research & Analysis</h2>
-                        <p>Comprehensive identification and evaluation of relevant government contracting opportunities at all levels. We analyze market trends, competitor positioning, and identify the best-fit opportunities for your capabilities.</p>
+                    <div class="sliding-card" tabindex="0">
+                        <h3>Proposal Writing & Compliance</h3>
+                        <p>Compliance is the floor; persuasion is the ceiling. We craft compelling, technically sound bids aligned to solicitation requirements with clarity and precision. Every proposal is built to score, not just to submit.</p>
                     </div>
 
-                    <div class="service-card">
-                        <h2>Proposal Writing</h2>
-                        <p>Expert support in drafting, editing, and organizing proposal content to meet solicitation requirements. Our team focuses on clarity, compliance, and compelling narratives that win contracts.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h2>Bid Management</h2>
-                        <p>End-to-end support throughout the bidding process, from preparation to submission. We handle timeline planning, document coordination, deadline management, and compliance verification.</p>
+                    <div class="sliding-card" tabindex="0">
+                        <h3>Full Bid Management</h3>
+                        <p>From initial RFI to final submission—deadlines, portals, and compliance managed end-to-end so you can focus on performance. We handle the footwork while you prepare to deliver excellence.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- END SECTION: Services -->
+
+        <!-- START SECTION: Process -->
+        <section class="section" style="background-color: var(--bg-obsidian-light);" aria-labelledby="process-heading">
+            <div class="container">
+                <h2 id="process-heading" class="section-title">Our Process</h2>
+                <p class="section-subtitle">A proven methodology for government contracting success</p>
+                
+                <div class="card-grid">
+                    <div class="sliding-card" tabindex="0">
+                        <h3>1. Assessment & Strategy</h3>
+                        <p>We begin with a comprehensive evaluation of your capabilities, certifications, and competitive positioning. This foundation informs every strategic decision moving forward.</p>
+                    </div>
+
+                    <div class="sliding-card" tabindex="0">
+                        <h3>2. Opportunity Identification</h3>
+                        <p>Using advanced market intelligence tools and agency relationships, we identify opportunities that align with your strengths and growth objectives.</p>
+                    </div>
+
+                    <div class="sliding-card" tabindex="0">
+                        <h3>3. Capture & Execution</h3>
+                        <p>We develop winning capture strategies, craft compliant proposals, and manage the entire submission process to maximize your probability of win.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION: Process -->
     </main>
 
+    <!-- START SECTION: Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Black Orchid Business Group. All rights reserved.</p>
-            <p>Strategic Intelligence & Government Contracting Solutions</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
+                <p>Strategic Intelligence & Government Contracting Excellence</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
+    <!-- END SECTION: Footer -->
 
     <script src="/js/dark-mode.js"></script>
 </body>
