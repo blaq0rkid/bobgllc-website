@@ -1,30 +1,38 @@
-// APEX Roadmap Form Handler
-document.getElementById('apexIntakeForm')?.addEventListener('submit', function(e) {
+// Form Handlers for all intake forms
+
+// APEX Roadmap Form
+document.getElementById('apexRoadmapForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
     showThankYouModal();
-    this.reset();
+    setTimeout(() => this.reset(), 500);
 });
 
-// Federal Diagnostic Form Handler
+// Federal Diagnostic Form
 document.getElementById('federalDiagnosticForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
     showThankYouModal();
-    this.reset();
+    setTimeout(() => this.reset(), 500);
+});
+
+// Sub-to-Prime Form
+document.getElementById('subToPrimeForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    showThankYouModal();
+    setTimeout(() => this.reset(), 500);
 });
 
 // Thank You Modal Functions
 function showThankYouModal() {
-    const modal = document.getElementById('thankYouModal');
+    let modal = document.getElementById('thankYouModal');
     if (!modal) {
         createThankYouModal();
+        modal = document.getElementById('thankYouModal');
     }
-    const modalElement = document.getElementById('thankYouModal');
-    modalElement.classList.remove('hidden');
-    modalElement.setAttribute('aria-hidden', 'false');
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     
-    // Focus the modal
-    const closeButton = modalElement.querySelector('.modal-close');
+    const closeButton = modal.querySelector('.modal-close');
     if (closeButton) closeButton.focus();
 }
 
@@ -39,24 +47,29 @@ function closeThankYouModal() {
 
 function createThankYouModal() {
     const modalHTML = `
-        <div id="thankYouModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" style="position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.8);">
-            <div style="background: var(--glass-bg); border: 2px solid var(--accent-gold); border-radius: 12px; padding: 40px; max-width: 500px; margin: 20px; position: relative; backdrop-filter: blur(10px);">
-                <button class="modal-close" onclick="closeThankYouModal()" aria-label="Close modal" style="position: absolute; top: 15px; right: 15px; background: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold); width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">×</button>
+        <div id="thankYouModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeThankYouModal()" aria-label="Close modal">×</button>
                 
-                <div style="text-align: center;">
-                    <div style="width: 80px; height: 3px; background: var(--accent-gold); margin: 0 auto 30px;"></div>
-                    <h2 id="modal-title" style="color: var(--accent-gold); font-size: 2rem; margin-bottom: 15px;">Intelligence Received</h2>
-                    <p id="modal-description" style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 30px;">Analysis in Progress.</p>
-                    <p style="color: var(--text-muted); line-height: 1.6;">Our team will review your submission and contact you within 48 hours with a strategic roadmap tailored to your objectives.</p>
-                </div>
+                <div class="modal-divider"></div>
+                <h2 id="modal-title" style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">Intelligence Received</h2>
+                <p id="modal-description" style="color: var(--text-dim); font-size: 1.2rem; margin-bottom: 2rem;">Analysis in Progress.</p>
+                <p style="color: var(--text-dim); line-height: 1.6;">Our team will review your submission and contact you within 48 hours with a strategic roadmap tailored to your objectives.</p>
             </div>
         </div>
     `;
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     
-    // Add escape key handler
+    // Escape key handler
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
+            closeThankYouModal();
+        }
+    });
+    
+    // Click outside to close
+    document.getElementById('thankYouModal').addEventListener('click', function(e) {
+        if (e.target === this) {
             closeThankYouModal();
         }
     });
