@@ -1,4 +1,3 @@
-
 // Dark mode functionality
 class DarkModeManager {
     constructor() {
