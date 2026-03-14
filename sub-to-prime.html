@@ -1,266 +1,138 @@
-
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sub-to-Prime Transition | Black Orchid Business Group</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        obsidian: '#050505',
-                        gold: '#D4AF37',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .sliding-card {
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .sliding-card:hover, .sliding-card:focus-within {
-            transform: translateY(-4px);
-            border-color: #D4AF37;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-        .logo-invert {
-            transition: filter 0.3s ease;
-        }
-        html:not(.dark) .logo-invert {
-            filter: invert(1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-obsidian dark:bg-obsidian dark:text-white bg-white text-gray-900 min-h-screen">
-    
-    <!-- Navigation -->
-    <nav class="bg-obsidian dark:bg-obsidian bg-white border-b border-white/10 dark:border-white/10 border-gray-200 sticky top-0 z-50" aria-label="Main navigation">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-3">
-                        <img src="/logo.png" alt="Black Orchid Business Group Logo" class="h-10 w-auto logo-invert">
-                        <span class="text-xl font-bold font-serif text-gold tracking-wider hidden sm:block">BOBG</span>
-                    </a>
-                    <div class="hidden md:flex items-center gap-6">
-                        <a href="/" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Home</a>
-                        
-                        <div class="relative group">
-                            <button class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1 flex items-center gap-1">
-                                Intake Forms <i class="fas fa-chevron-down text-xs"></i>
-                            </button>
-                            <div class="absolute left-0 mt-2 w-64 bg-obsidian dark:bg-obsidian bg-white border border-white/10 dark:border-white/10 border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                <a href="/federal-readiness.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Federal Contracting Readiness</a>
-                                <a href="/apex-roadmap.html" class="block px-4 py-3 text-white dark:text-white text-gray-900 hover:text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">APEX Roadmap</a>
-                                <a href="/sub-to-prime.html" class="block px-4 py-3 text-gold hover:bg-white/5 dark:hover:bg-white/5 hover:bg-gray-100 transition-colors">Sub-to-Prime Transition</a>
-                            </div>
-                        </div>
-                        
-                        <a href="/intelligence.html" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Intelligence</a>
-                        <a href="/#services" class="nav-link text-white dark:text-white text-gray-900 hover:text-gold transition-colors px-2 py-1">Services</a>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-moon" id="themeIcon"></i>
-                    </button>
-                    <button id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" class="md:hidden p-2 rounded-lg border border-gold text-gold hover:bg-gold hover:text-obsidian transition-colors">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="px-4 py-4 flex flex-col gap-3">
-                <a href="/" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Home</a>
-                <div class="border-t border-white/10 pt-2 mt-2">
-                    <p class="text-gold text-xs uppercase tracking-wider mb-2 px-2">Intake Forms</p>
-                    <a href="/federal-readiness.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">Federal Contracting Readiness</a>
-                    <a href="/apex-roadmap.html" class="block px-2 py-2 text-white dark:text-white text-gray-900 hover:text-gold">APEX Roadmap</a>
-                    <a href="/sub-to-prime.html" class="block px-2 py-2 text-gold">Sub-to-Prime Transition</a>
-                </div>
-                <a href="/intelligence.html" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Intelligence</a>
-                <a href="/#services" class="text-white dark:text-white text-gray-900 hover:text-gold px-2 py-2">Services</a>
-            </div>
-        </div>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="BOBG Logo" class="logo-image">
+        <div class="logo-text">BOBG</div>
+    </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="apex-roadmap.html">APEX ROADMAP</a>
+        <a href="federal-diagnostic.html">FEDERAL DIAGNOSTIC</a>
+        <a href="sub-to-prime.html" class="active">SUB-TO-PRIME</a>
+        <a href="intelligence.html">INTELLIGENCE</a>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+            <span class="toggle-icon">☀️</span>
+        </button>
     </nav>
+</header>
 
-    <main>
-        <!-- Hero with Background Image -->
-        <section class="relative min-h-[40vh] flex items-center justify-center bg-center bg-cover" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.7)), url('/hero-patriotic.webp.png');">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
-                <h1 class="text-4xl sm:text-5xl font-bold font-serif text-gold mb-4">
-                    Sub-to-Prime Transition
-                </h1>
-                <p class="text-lg text-white/90">
-                    Strategizing your evolution from high-value partner to mission lead.
-                </p>
+<section class="hero" aria-labelledby="sub-to-prime-heading">
+    <div class="hero-content">
+        <h1 id="sub-to-prime-heading">Sub-to-Prime Transition</h1>
+        <p>Strategizing your evolution from high-value partner to mission lead</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="card">
+        <h2>Prime Evolution Framework</h2>
+        <p style="color: var(--text-dim); margin-bottom: 3rem;">
+            Strategic assessment for transitioning to primary contractor status
+        </p>
+
+        <form id="subToPrimeForm" class="form-cards-container">
+            
+            <!-- Card 1: Agency Experience -->
+            <div class="form-card">
+                <h3>Agency Partnership History</h3>
+                <div class="form-group">
+                    <label>Which federal agencies have you supported as a key strategic partner over the last 36 months?</label>
+                    <input type="text" name="agencies" placeholder="e.g., DHA, VA, DHS, SSA" required>
+                </div>
+                <div class="form-group">
+                    <label>What is the highest value subcontract you have successfully managed to date?</label>
+                    <input type="text" name="highest-value" placeholder="Total Contract Value (TCV)" required>
+                </div>
             </div>
-        </section>
 
-        <!-- Form Section -->
-        <section class="py-20 bg-obsidian dark:bg-obsidian bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <form name="sub-to-prime" method="POST" data-netlify="true" action="/thank-you.html" class="flex flex-col gap-6">
-                    <input type="hidden" name="form-name" value="sub-to-prime">
-                    
-                    <!-- 1. Agency Experience -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Which federal agencies have you supported as a key strategic partner over the last 36 months?
-                        </label>
-                        <input type="text" name="agencies" required placeholder="e.g., DHA, VA, DHS, SSA" class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
+            <!-- Card 2: Prime-Ready Infrastructure -->
+            <div class="form-card">
+                <h3>Prime-Ready Infrastructure</h3>
+                <div class="form-group">
+                    <label>Has your organization developed a Prime-ready management infrastructure (HR, Finance, Legal)?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="infrastructure" value="yes" required> Fully Ready</label>
+                        <label class="radio-item"><input type="radio" name="infrastructure" value="developing"> Currently Developing</label>
+                        <label class="radio-item"><input type="radio" name="infrastructure" value="none"> Requires Advisory</label>
                     </div>
-
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            What is the highest value subcontract you have successfully managed to date?
-                        </label>
-                        <input type="text" name="highest-value" required placeholder="Total Contract Value (TCV)" class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                    </div>
-
-                    <!-- 2. Prime-Ready Infrastructure -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Has your organization developed a Prime-ready management infrastructure (HR, Finance, Legal)?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="infrastructure" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Fully Ready</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="infrastructure" value="developing" class="text-gold focus:ring-gold">
-                                <span>Currently Developing</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="infrastructure" value="none" class="text-gold focus:ring-gold">
-                                <span>Requires Advisory</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- 3. Gap Analysis -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Identify the primary gap currently preventing your transition to Prime status:
-                        </label>
-                        <select name="primary-gap" required class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold">
-                            <option value="">Select Primary Obstacle</option>
-                            <option value="fcl">Security Clearances (FCL/PCL)</option>
-                            <option value="dcaa">Accounting Compliance (DCAA)</option>
-                            <option value="proposal">High-Value Proposal Management</option>
-                            <option value="capital">Operational Capital / Bonding</option>
-                            <option value="past-perf">Direct Past Performance Citations</option>
-                        </select>
-                    </div>
-
-                    <!-- 4. Responsibility Demonstration -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Do you have past performance citations that demonstrate 'Primary' level responsibility?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="responsibility" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes, documented.</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="responsibility" value="need-refining" class="text-gold focus:ring-gold">
-                                <span>Requires strategic refinement.</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="responsibility" value="no" class="text-gold focus:ring-gold">
-                                <span>No.</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- 5. Strategic Targets -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Which upcoming Prime opportunities have you identified as your first strategic targets?
-                        </label>
-                        <textarea name="targets" rows="3" required placeholder="List specific RFIs, RFPs, or Agencies..." class="w-full px-4 py-3 bg-obsidian dark:bg-obsidian bg-white border border-white/20 dark:border-white/20 border-gray-300 rounded-lg text-white dark:text-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
-                    </div>
-
-                    <!-- 6. Partner Network -->
-                    <div class="sliding-card bg-white/5 dark:bg-white/5 bg-gray-100 border border-white/10 dark:border-white/10 border-gray-300 rounded-lg p-6">
-                        <label class="block text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Do you have a pre-existing network of high-value partners to support your role as a Prime?
-                        </label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="network" value="yes" required class="text-gold focus:ring-gold">
-                                <span>Yes, ready to deploy.</span>
-                            </label>
-                            <label class="flex items-center gap-2 cursor-pointer text-white dark:text-white text-gray-700">
-                                <input type="radio" name="network" value="in-progress" class="text-gold focus:ring-gold">
-                                <span>Building our ecosystem.</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gold text-obsidian font-bold py-4 px-6 rounded-lg hover:bg-gold/90 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all uppercase tracking-wider">
-                        Initiate Prime Evolution
-                    </button>
-                </form>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-obsidian dark:bg-obsidian bg-white border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm">
-                &copy; 2026 Black Orchid Business Group. All rights reserved.
-            </p>
-            <p class="text-white/60 dark:text-white/60 text-gray-500 text-sm mt-2">
-                Intelligence. Strategy. Access.
-            </p>
-        </div>
-    </footer>
+            <!-- Card 3: Gap Analysis -->
+            <div class="form-card">
+                <h3>Transition Gap Analysis</h3>
+                <div class="form-group">
+                    <label>Identify the primary gap currently preventing your transition to Prime status:</label>
+                    <select name="primary-gap" required>
+                        <option value="">Select Primary Obstacle</option>
+                        <option value="fcl">Security Clearances (FCL/PCL)</option>
+                        <option value="dcaa">Accounting Compliance (DCAA)</option>
+                        <option value="proposal">High-Value Proposal Management</option>
+                        <option value="capital">Operational Capital / Bonding</option>
+                        <option value="past-perf">Direct Past Performance Citations</option>
+                    </select>
+                </div>
+            </div>
 
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+            <!-- Card 4: Responsibility Demonstration -->
+            <div class="form-card">
+                <h3>Performance Validation</h3>
+                <div class="form-group">
+                    <label>Do you have past performance citations that demonstrate 'Primary' level responsibility?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="resp" value="yes" required> Yes, documented</label>
+                        <label class="radio-item"><input type="radio" name="resp" value="need-refining"> Requires strategic refinement</label>
+                        <label class="radio-item"><input type="radio" name="resp" value="no"> No</label>
+                    </div>
+                </div>
+            </div>
 
-        themeToggle.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
+            <!-- Card 5: Strategic Targets -->
+            <div class="form-card">
+                <h3>Target Opportunities</h3>
+                <div class="form-group">
+                    <label>Which upcoming Prime opportunities have you identified as your first strategic targets?</label>
+                    <textarea rows="3" name="targets" placeholder="List specific RFIs, RFPs, or Agencies..." required></textarea>
+                </div>
+            </div>
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            html.classList.remove('dark');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
+            <!-- Card 6: Partner Network -->
+            <div class="form-card">
+                <h3>Strategic Partner Ecosystem</h3>
+                <div class="form-group">
+                    <label>Do you have a pre-existing network of high-value partners to support your role as a Prime?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="network" value="yes" required> Yes, ready to deploy</label>
+                        <label class="radio-item"><input type="radio" name="network" value="in-progress"> Building our ecosystem</label>
+                    </div>
+                </div>
+            </div>
 
-        document.getElementById('mobileMenuToggle').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-    </script>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn-gold">Initiate Prime Evolution</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Black Orchid Business Group LLC. All Rights Reserved.<br>
+    Intelligence. Strategy. Access.<br>
+    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
+
+<script src="js/dark-mode.js"></script>
+<script src="js/form-handlers.js"></script>
 </body>
 </html>
