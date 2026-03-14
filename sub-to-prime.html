@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sub-to-Prime Transition | Black Orchid Business Group</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,100 +26,195 @@
     </nav>
 </header>
 
-<section class="hero" aria-labelledby="sub-to-prime-heading">
+<section class="hero" aria-labelledby="transition-heading">
     <div class="hero-content">
-        <h1 id="sub-to-prime-heading">Sub-to-Prime Transition</h1>
-        <p>Strategizing your evolution from high-value partner to mission lead</p>
+        <h1 id="transition-heading">Sub-to-Prime Transition Assessment</h1>
+        <p>Strategic evaluation of your readiness to cross the chasm</p>
     </div>
 </section>
 
 <div class="container">
     <section class="card">
-        <h2>Prime Evolution Framework</h2>
+        <h2>Prime Contractor Readiness</h2>
         <p style="color: var(--text-dim); margin-bottom: 3rem;">
-            Strategic assessment for transitioning to primary contractor status
+            Comprehensive analysis of your infrastructure, capabilities, and market positioning
         </p>
 
-        <form id="subToPrimeForm" class="form-cards-container">
+        <form name="sub-to-prime" method="POST" data-netlify="true" action="/thank-you.html" class="form-cards-container">
+            <input type="hidden" name="form-name" value="sub-to-prime" />
             
-            <!-- Card 1: Agency Experience -->
+            <!-- Card 1: Current Position -->
             <div class="form-card">
-                <h3>Agency Partnership History</h3>
+                <h3>Current Market Position</h3>
                 <div class="form-group">
-                    <label>Which federal agencies have you supported as a key strategic partner over the last 36 months?</label>
-                    <input type="text" name="agencies" placeholder="e.g., DHA, VA, DHS, SSA" required>
+                    <label>What is your current annual revenue from federal subcontracting?</label>
+                    <select name="current-revenue" required>
+                        <option value="">Select Range</option>
+                        <option value="under-500k">Under $500K</option>
+                        <option value="500k-1m">$500K - $1M</option>
+                        <option value="1m-2m">$1M - $2M</option>
+                        <option value="2m-5m">$2M - $5M</option>
+                        <option value="over-5m">Over $5M</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label>What is the highest value subcontract you have successfully managed to date?</label>
-                    <input type="text" name="highest-value" placeholder="Total Contract Value (TCV)" required>
+                    <label>How many active subcontracts do you currently hold?</label>
+                    <input type="text" name="active-subcontracts" placeholder="Number of active subcontracts" required>
                 </div>
             </div>
 
-            <!-- Card 2: Prime-Ready Infrastructure -->
+            <!-- Card 2: Past Performance -->
             <div class="form-card">
-                <h3>Prime-Ready Infrastructure</h3>
+                <h3>Performance Track Record</h3>
                 <div class="form-group">
-                    <label>Has your organization developed a Prime-ready management infrastructure (HR, Finance, Legal)?</label>
+                    <label>What is your average CPARS rating across recent contracts?</label>
                     <div class="radio-group">
-                        <label class="radio-item"><input type="radio" name="infrastructure" value="yes" required> Fully Ready</label>
-                        <label class="radio-item"><input type="radio" name="infrastructure" value="developing"> Currently Developing</label>
-                        <label class="radio-item"><input type="radio" name="infrastructure" value="none"> Requires Advisory</label>
+                        <label class="radio-item"><input type="radio" name="cpars-rating" value="exceptional" required> Exceptional</label>
+                        <label class="radio-item"><input type="radio" name="cpars-rating" value="very-good"> Very Good</label>
+                        <label class="radio-item"><input type="radio" name="cpars-rating" value="satisfactory"> Satisfactory</label>
+                        <label class="radio-item"><input type="radio" name="cpars-rating" value="marginal"> Marginal or below</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Describe your most significant federal performance achievement:</label>
+                    <textarea rows="4" name="performance-achievement" placeholder="Detail your most notable contract success..." required></textarea>
+                </div>
+            </div>
+
+            <!-- Card 3: Prime Relationships -->
+            <div class="form-card">
+                <h3>Prime Contractor Relationships</h3>
+                <div class="form-group">
+                    <label>How would you characterize your relationships with current Prime contractors?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="prime-relationships" value="strategic" required> Strategic partnerships</label>
+                        <label class="radio-item"><input type="radio" name="prime-relationships" value="transactional"> Transactional relationships</label>
+                        <label class="radio-item"><input type="radio" name="prime-relationships" value="limited"> Limited engagement</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Have you been encouraged by agency contacts to pursue Prime status?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="agency-encouragement" value="yes" required> Yes, multiple times</label>
+                        <label class="radio-item"><input type="radio" name="agency-encouragement" value="once"> Yes, at least once</label>
+                        <label class="radio-item"><input type="radio" name="agency-encouragement" value="no"> Not yet</label>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 3: Gap Analysis -->
+            <!-- Card 4: Infrastructure -->
             <div class="form-card">
-                <h3>Transition Gap Analysis</h3>
+                <h3>Operational Infrastructure</h3>
                 <div class="form-group">
-                    <label>Identify the primary gap currently preventing your transition to Prime status:</label>
-                    <select name="primary-gap" required>
-                        <option value="">Select Primary Obstacle</option>
-                        <option value="fcl">Security Clearances (FCL/PCL)</option>
-                        <option value="dcaa">Accounting Compliance (DCAA)</option>
-                        <option value="proposal">High-Value Proposal Management</option>
-                        <option value="capital">Operational Capital / Bonding</option>
-                        <option value="past-perf">Direct Past Performance Citations</option>
+                    <label>Is your accounting system DCAA compliant or ready for DCAA audit?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="dcaa-compliance" value="compliant" required> Fully compliant</label>
+                        <label class="radio-item"><input type="radio" name="dcaa-compliance" value="in-progress"> Implementation underway</label>
+                        <label class="radio-item"><input type="radio" name="dcaa-compliance" value="not-ready"> Not yet ready</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Do you have dedicated contracts administration and compliance staff?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="compliance-staff" value="yes" required> Yes, dedicated team</label>
+                        <label class="radio-item"><input type="radio" name="compliance-staff" value="partial"> Partial coverage</label>
+                        <label class="radio-item"><input type="radio" name="compliance-staff" value="no"> No dedicated staff</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Financial Capacity -->
+            <div class="form-card">
+                <h3>Financial Readiness</h3>
+                <div class="form-group">
+                    <label>Can you currently support 60-90 day payment cycles typical of Prime contracts?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="payment-cycles" value="yes" required> Yes, fully capable</label>
+                        <label class="radio-item"><input type="radio" name="payment-cycles" value="limited"> Limited capacity</label>
+                        <label class="radio-item"><input type="radio" name="payment-cycles" value="no"> Requires financing</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>What is your current bonding capacity?</label>
+                    <select name="bonding-capacity" required>
+                        <option value="">Select Range</option>
+                        <option value="none">No bonding capacity</option>
+                        <option value="under-1m">Under $1M</option>
+                        <option value="1m-5m">$1M - $5M</option>
+                        <option value="5m-10m">$5M - $10M</option>
+                        <option value="over-10m">Over $10M</option>
                     </select>
                 </div>
             </div>
 
-            <!-- Card 4: Responsibility Demonstration -->
+            <!-- Card 6: Security Compliance -->
             <div class="form-card">
-                <h3>Performance Validation</h3>
+                <h3>Security & Compliance</h3>
                 <div class="form-group">
-                    <label>Do you have past performance citations that demonstrate 'Primary' level responsibility?</label>
+                    <label>What is your current CMMC/cybersecurity compliance level?</label>
+                    <select name="cmmc-level" required>
+                        <option value="">Select Level</option>
+                        <option value="level-1">CMMC Level 1</option>
+                        <option value="level-2">CMMC Level 2</option>
+                        <option value="level-3">CMMC Level 3+</option>
+                        <option value="in-progress">Assessment in progress</option>
+                        <option value="none">Not yet assessed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Do you hold a Facility Security Clearance (FCL)?</label>
                     <div class="radio-group">
-                        <label class="radio-item"><input type="radio" name="resp" value="yes" required> Yes, documented</label>
-                        <label class="radio-item"><input type="radio" name="resp" value="need-refining"> Requires strategic refinement</label>
-                        <label class="radio-item"><input type="radio" name="resp" value="no"> No</label>
+                        <label class="radio-item"><input type="radio" name="fcl" value="yes" required> Yes</label>
+                        <label class="radio-item"><input type="radio" name="fcl" value="in-progress"> Application in progress</label>
+                        <label class="radio-item"><input type="radio" name="fcl" value="no"> No</label>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 5: Strategic Targets -->
+            <!-- Card 7: Target Opportunities -->
             <div class="form-card">
-                <h3>Target Opportunities</h3>
+                <h3>Target Market Positioning</h3>
                 <div class="form-group">
-                    <label>Which upcoming Prime opportunities have you identified as your first strategic targets?</label>
-                    <textarea rows="3" name="targets" placeholder="List specific RFIs, RFPs, or Agencies..." required></textarea>
+                    <label>Which agencies represent your primary Prime target opportunities?</label>
+                    <textarea rows="3" name="target-agencies" placeholder="List specific agencies and programs..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>What is your ideal contract size as a Prime?</label>
+                    <select name="ideal-contract-size" required>
+                        <option value="">Select Range</option>
+                        <option value="under-1m">Under $1M</option>
+                        <option value="1m-5m">$1M - $5M</option>
+                        <option value="5m-10m">$5M - $10M</option>
+                        <option value="10m-25m">$10M - $25M</option>
+                        <option value="over-25m">Over $25M</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Card 6: Partner Network -->
+            <!-- Card 8: Timeline -->
             <div class="form-card">
-                <h3>Strategic Partner Ecosystem</h3>
+                <h3>Transition Timeline</h3>
                 <div class="form-group">
-                    <label>Do you have a pre-existing network of high-value partners to support your role as a Prime?</label>
+                    <label>What is your target timeline for securing your first Prime contract?</label>
                     <div class="radio-group">
-                        <label class="radio-item"><input type="radio" name="network" value="yes" required> Yes, ready to deploy</label>
-                        <label class="radio-item"><input type="radio" name="network" value="in-progress"> Building our ecosystem</label>
+                        <label class="radio-item"><input type="radio" name="timeline" value="6-months" required> 6 months</label>
+                        <label class="radio-item"><input type="radio" name="timeline" value="12-months"> 12 months</label>
+                        <label class="radio-item"><input type="radio" name="timeline" value="18-months"> 18 months</label>
+                        <label class="radio-item"><input type="radio" name="timeline" value="24-months"> 24+ months</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Are you prepared to invest in capture activities (BD, proposal development, teaming)?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="capture-investment" value="yes" required> Yes, fully committed</label>
+                        <label class="radio-item"><input type="radio" name="capture-investment" value="limited"> Limited budget available</label>
+                        <label class="radio-item"><input type="radio" name="capture-investment" value="no"> Requires planning</label>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
-                <button type="submit" class="btn-gold">Initiate Prime Evolution</button>
+                <button type="submit" class="btn-gold">Submit Transition Assessment</button>
             </div>
         </form>
     </section>
@@ -133,6 +227,5 @@
 </footer>
 
 <script src="js/dark-mode.js"></script>
-<script src="js/form-handlers.js"></script>
 </body>
 </html>
