@@ -7,135 +7,113 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- START SECTION: Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo-container">
-                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
-                    <div class="logo-text">Black Orchid Business Group</div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="apex-roadmap.html">APEX Roadmap</a></li>
-                    <li><a href="federal-diagnostic.html">Federal Diagnostic</a></li>
-                    <li><a href="intelligence.html" class="active">Intelligence</a></li>
-                </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
-                    <span class="toggle-icon">☀️</span>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <!-- END SECTION: Navigation -->
 
-    <main>
-        <!-- START SECTION: Hero -->
-        <section class="hero" aria-labelledby="intelligence-hero-heading">
-            <div class="hero-content">
-                <h1 id="intelligence-hero-heading">Intelligence <span>Library</span></h1>
-                <p>Strategic insights and analysis for government contracting excellence</p>
-            </div>
-        </section>
-        <!-- END SECTION: Hero -->
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="BOBG Logo" class="logo-image">
+        <div class="logo-text">BOBG</div>
+    </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="apex-roadmap.html">APEX ROADMAP</a>
+        <a href="federal-diagnostic.html">FEDERAL DIAGNOSTIC</a>
+        <a href="sub-to-prime.html">SUB-TO-PRIME</a>
+        <a href="intelligence.html" class="active">INTELLIGENCE</a>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+            <span class="toggle-icon">☀️</span>
+        </button>
+    </nav>
+</header>
 
-        <!-- START SECTION: Articles Grid -->
-        <section class="section" aria-labelledby="articles-heading">
-            <div class="container">
-                <h2 id="articles-heading" class="section-title">Strategic Intelligence</h2>
-                <p class="section-subtitle">Deep analysis on government contracting operations</p>
-                
-                <ul role="list" class="card-grid" style="list-style: none;">
-                    <!-- Article 1 -->
-                    <li>
-                        <a href="intelligence/ultimate-guide-federal-proposal-management.html" class="article-card" style="text-decoration: none; display: block;">
-                            <div class="article-thumbnail">
-                                <img src="https://cdn.marblism.com/5DxQECTU4mZ.webp" alt="Abstract gold-on-black graphic for The Ultimate Guide to Federal Proposal Management">
-                            </div>
-                            <div class="article-content">
-                                <h3>The Ultimate Guide to Federal Proposal Management</h3>
-                                <p class="article-excerpt">Stop paying the 30% Middleman Tax...</p>
-                                <span class="read-more">Read Full Analysis →</span>
-                            </div>
-                        </a>
-                    </li>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Intelligence Library</h1>
+        <p>Strategic insights for federal contracting excellence</p>
+    </div>
+</section>
 
-                    <!-- Article 2 -->
-                    <li>
-                        <a href="intelligence/architecture-of-a-prime.html" class="article-card" style="text-decoration: none; display: block;">
-                            <div class="article-thumbnail">
-                                <img src="https://cdn.marblism.com/LHG1G71YZxl.webp" alt="Strategic framework visualization for The Architecture of a Prime">
-                            </div>
-                            <div class="article-content">
-                                <h3>The Architecture of a Prime</h3>
-                                <p class="article-excerpt">Building the infrastructure to compete as a primary contractor in the federal marketplace.</p>
-                                <span class="read-more">Read Full Analysis →</span>
-                            </div>
-                        </a>
-                    </li>
+<div class="container">
+    <section class="card">
+        <h2>Strategic Intelligence</h2>
+        <p style="color: var(--text-dim); margin-bottom: 2rem;">Deep analysis on government contracting operations and market positioning</p>
+        
+        <ul class="articles-grid">
+            <li>
+                <a href="intelligence/ultimate-guide.html" class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://cdn.marblism.com/5DxQECTU4mZ.webp" alt="Federal Proposal Management">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-badge">FEATURED</span>
+                        <h3>The Ultimate Guide to Federal Proposal Management</h3>
+                        <p class="article-excerpt">Stop paying the 30% Middleman Tax and master federal proposal management internally.</p>
+                        <span class="read-more">Read Analysis →</span>
+                    </div>
+                </a>
+            </li>
 
-                    <!-- Article 3 -->
-                    <li>
-                        <a href="intelligence/dsbs-is-now-sbs.html" class="article-card" style="text-decoration: none; display: block;">
-                            <div class="article-thumbnail">
-                                <img src="https://cdn.marblism.com/j0xk2soH4jR.webp" alt="System transition graphic for DSBS to SBS">
-                            </div>
-                            <div class="article-content">
-                                <h3>DSBS Is Now SBS</h3>
-                                <p class="article-excerpt">Understanding the transition and what it means for small business contractors.</p>
-                                <span class="read-more">Read Full Analysis →</span>
-                            </div>
-                        </a>
-                    </li>
+            <li>
+                <a href="intelligence/architecture-prime.html" class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://cdn.marblism.com/LHG1G71YZxl.webp" alt="Architecture of a Prime">
+                    </div>
+                    <div class="article-content">
+                        <h3>The Architecture of a Prime</h3>
+                        <p class="article-excerpt">Building the infrastructure necessary to compete as a primary contractor in federal markets.</p>
+                        <span class="read-more">Read Analysis →</span>
+                    </div>
+                </a>
+            </li>
 
-                    <!-- Article 4 -->
-                    <li>
-                        <a href="intelligence/ifb-intelligence-report.html" class="article-card" style="text-decoration: none; display: block;">
-                            <div class="article-thumbnail">
-                                <img src="https://cdn.marblism.com/g0N-aUOuxDY.webp" alt="Data analysis visualization for IFB Intelligence Report">
-                            </div>
-                            <div class="article-content">
-                                <h3>IFB Intelligence Report</h3>
-                                <p class="article-excerpt">Strategic analysis of Invitation for Bid opportunities and winning strategies.</p>
-                                <span class="read-more">Read Full Analysis →</span>
-                            </div>
-                        </a>
-                    </li>
+            <li>
+                <a href="intelligence/dsbs-sbs.html" class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://cdn.marblism.com/j0xk2soH4jR.webp" alt="DSBS to SBS Transition">
+                    </div>
+                    <div class="article-content">
+                        <h3>DSBS Is Now SBS</h3>
+                        <p class="article-excerpt">Understanding the transition from Dynamic Small Business Search to the new SBS platform.</p>
+                        <span class="read-more">Read Analysis →</span>
+                    </div>
+                </a>
+            </li>
 
-                    <!-- Article 5 -->
-                    <li>
-                        <a href="intelligence/sam-gov-registration-guide.html" class="article-card" style="text-decoration: none; display: block;">
-                            <div class="article-thumbnail">
-                                <img src="https://cdn.marblism.com/rk-lQIjhLBe.webp" alt="Registration process graphic for SAM.gov Guide">
-                            </div>
-                            <div class="article-content">
-                                <h3>The No-Stress Guide to SAM.gov Registration</h3>
-                                <p class="article-excerpt">Step-by-step guidance for navigating the federal registration process with confidence.</p>
-                                <span class="read-more">Read Full Analysis →</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- END SECTION: Articles Grid -->
-    </main>
+            <li>
+                <a href="intelligence/ifb-report.html" class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://cdn.marblism.com/g0N-aUOuxDY.webp" alt="IFB Intelligence">
+                    </div>
+                    <div class="article-content">
+                        <h3>IFB Intelligence Report</h3>
+                        <p class="article-excerpt">Strategic analysis of Invitation for Bid opportunities and competitive positioning strategies.</p>
+                        <span class="read-more">Read Analysis →</span>
+                    </div>
+                </a>
+            </li>
 
-    <!-- START SECTION: Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
-                <p>Strategic Intelligence & Government Contracting Excellence</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- END SECTION: Footer -->
+            <li>
+                <a href="intelligence/sam-gov-guide.html" class="article-card">
+                    <div class="article-thumbnail">
+                        <img src="https://cdn.marblism.com/rk-lQIjhLBe.webp" alt="SAM.gov Registration">
+                    </div>
+                    <div class="article-content">
+                        <h3>The No-Stress Guide to SAM.gov Registration</h3>
+                        <p class="article-excerpt">Step-by-step guidance for navigating federal registration with confidence and precision.</p>
+                        <span class="read-more">Read Analysis →</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
 
-    <script src="/js/dark-mode.js"></script>
+<footer>
+    &copy; 2026 Black Orchid Business Group LLC. All Rights Reserved.<br>
+    Intelligence. Strategy. Access.<br>
+    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
+
+<script src="js/dark-mode.js"></script>
 </body>
 </html>
