@@ -43,6 +43,9 @@ async function loadArticles() {
         return;
     }
     
+    // Clear loading message
+    container.innerHTML = '';
+    
     for (const filename of articles) {
         try {
             const response = await fetch(`/articles/${filename}`);
@@ -65,7 +68,7 @@ async function loadArticles() {
                     <h3>${article.metadata.title}</h3>
                     <p class="article-date">${new Date(article.metadata.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                     <p class="article-excerpt">${article.metadata.excerpt}</p>
-                    <a href="/article.html?id=${filename.replace('.md', '')}" class="read-more">Read Full Analysis →</a>
+                    <a href="article.html?id=${encodeURIComponent(filename.replace('.md', ''))}" class="read-more">Read Full Analysis →</a>
                 </div>
             `;
             
