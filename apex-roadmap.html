@@ -4,306 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEX Roadmap | Black Orchid Business Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- START SECTION: Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo-container">
-                    <img src="logo.png" alt="Black Orchid Business Group Logo" class="logo-image">
-                    <div class="logo-text">Black Orchid Business Group</div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="apex-roadmap.html" class="active">APEX Roadmap</a></li>
-                    <li><a href="federal-diagnostic.html">Federal Diagnostic</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
-                </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
-                    <span class="toggle-icon">☀️</span>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <!-- END SECTION: Navigation -->
 
-    <main>
-        <!-- START SECTION: Hero -->
-        <section class="hero" aria-labelledby="apex-hero-heading">
-            <div class="hero-content">
-                <h1 id="apex-hero-heading">APEX Roadmap <span>Intake Form</span></h1>
-                <p>Accelerate your qualification and roadmap alignment with strategic precision</p>
-            </div>
-        </section>
-        <!-- END SECTION: Hero -->
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="BOBG Logo" class="logo-image">
+        <div class="logo-text">BOBG</div>
+    </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="apex-roadmap.html" class="active">APEX ROADMAP</a>
+        <a href="federal-diagnostic.html">FEDERAL DIAGNOSTIC</a>
+        <a href="sub-to-prime.html">SUB-TO-PRIME</a>
+        <a href="intelligence.html">INTELLIGENCE</a>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+            <span class="toggle-icon">☀️</span>
+        </button>
+    </nav>
+</header>
 
-        <!-- START SECTION: Intake Form -->
-        <section class="section" aria-labelledby="intake-form-heading">
-            <div class="container">
-                <h2 id="intake-form-heading" class="section-title">Strategic Alignment Assessment</h2>
-                <p class="section-subtitle">Help us understand your position to build your custom roadmap</p>
-                
-                <form id="apexIntakeForm" aria-label="APEX Roadmap Intake Form">
-                    <!-- Card 1: Federal Recognition -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Federal Ecosystem Recognition</h3>
-                        <fieldset>
-                            <legend>Is your organization currently recognized as a registered entity within the federal ecosystem?</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="federal-recognition" value="yes" required>
-                                    Yes
-                                </label>
-                                <label>
-                                    <input type="radio" name="federal-recognition" value="no">
-                                    No
-                                </label>
-                                <label>
-                                    <input type="radio" name="federal-recognition" value="in-progress">
-                                    In Progress
-                                </label>
-                            </div>
-                        </fieldset>
+<section class="hero" aria-labelledby="roadmap-heading">
+    <div class="hero-content">
+        <h1 id="roadmap-heading">Apex Roadmap Intake</h1>
+        <p>Provide the intelligence required to customize your path to mission success</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="card">
+        <h2>Strategic Alignment Assessment</h2>
+        <p style="color: var(--text-dim); margin-bottom: 3rem;">
+            Precision mapping of your federal contracting trajectory
+        </p>
+
+        <form id="apexRoadmapForm" class="form-cards-container">
+            
+            <!-- Card 1: Federal Registration -->
+            <div class="form-card">
+                <h3>Federal Ecosystem Recognition</h3>
+                <div class="form-group">
+                    <label>Is your organization currently recognized as a registered entity within the federal ecosystem?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="registration" value="yes" required> Yes</label>
+                        <label class="radio-item"><input type="radio" name="registration" value="no"> No</label>
+                        <label class="radio-item"><input type="radio" name="registration" value="in-progress"> In-Progress</label>
                     </div>
-
-                    <!-- Card 2: Strategic Designations -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Strategic Designations</h3>
-                        <fieldset>
-                            <legend>What strategic designations can we leverage to give you a competitive edge?</legend>
-                            <div class="checkbox-group">
-                                <label>
-                                    <input type="checkbox" name="designations" value="8a">
-                                    8(a) Business Development
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="designations" value="wosb">
-                                    WOSB (Women-Owned Small Business)
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="designations" value="edwosb">
-                                    EDWOSB (Economically Disadvantaged WOSB)
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="designations" value="sdvosb">
-                                    SDVOSB (Service-Disabled Veteran-Owned)
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="designations" value="hubzone">
-                                    HUBZone
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="designations" value="mbe-dbe">
-                                    MBE/DBE
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="designations" value="other">
-                                    Other
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 3: Domain Expertise -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Domain of Expertise</h3>
-                        <div class="form-group">
-                            <label for="domain-expertise">What is your primary domain of expertise where you deliver the most impact?</label>
-                            <input type="text" id="domain-expertise" name="domain-expertise" placeholder="e.g., IT Services, Professional Services, Construction" required>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Growth Positioning -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Growth Positioning</h3>
-                        <div class="form-group">
-                            <label for="revenue-scale">Where are you currently positioned on the growth curve in terms of annual scale?</label>
-                            <select id="revenue-scale" name="revenue-scale" required>
-                                <option value="">Select revenue range</option>
-                                <option value="under-500k">Under $500K</option>
-                                <option value="500k-1m">$500K - $1M</option>
-                                <option value="1m-5m">$1M - $5M</option>
-                                <option value="5m-10m">$5M - $10M</option>
-                                <option value="10m-25m">$10M - $25M</option>
-                                <option value="over-25m">Over $25M</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: Past Performance -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Complexity Management</h3>
-                        <div class="form-group">
-                            <label for="past-performance">What is the highest level of complexity your team has successfully managed to date?</label>
-                            <textarea id="past-performance" name="past-performance" rows="5" placeholder="Describe your most significant contract: agency, scope, period of performance, contract value" required></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Prime vs Sub Strategy -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Contracting Strategy</h3>
-                        <fieldset>
-                            <legend>Are you looking to lead as a Prime contractor, or is your strategy focused on high-value subcontracting?</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="strategy" value="prime" required>
-                                    Prime Contractor
-                                </label>
-                                <label>
-                                    <input type="radio" name="strategy" value="sub">
-                                    Subcontractor
-                                </label>
-                                <label>
-                                    <input type="radio" name="strategy" value="both">
-                                    Both
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 7: Security Clearances -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Security Clearances</h3>
-                        <fieldset>
-                            <legend>Does your organization hold the necessary clearances for restricted or sensitive government missions?</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="clearances" value="none" required>
-                                    None
-                                </label>
-                                <label>
-                                    <input type="radio" name="clearances" value="secret">
-                                    Secret
-                                </label>
-                                <label>
-                                    <input type="radio" name="clearances" value="top-secret">
-                                    Top Secret
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 8: Financial Infrastructure -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Financial Infrastructure</h3>
-                        <fieldset>
-                            <legend>Is your financial infrastructure ready to meet the sophisticated accounting standards required for federal contracts?</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="financial-ready" value="yes" required>
-                                    Yes
-                                </label>
-                                <label>
-                                    <input type="radio" name="financial-ready" value="no">
-                                    No
-                                </label>
-                                <label>
-                                    <input type="radio" name="financial-ready" value="in-progress">
-                                    In Progress
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 9: Data Security Compliance -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Data Security Mandates</h3>
-                        <div class="form-group">
-                            <label for="cyber-compliance">Where do you stand on meeting the government's evolving data security and protection mandates?</label>
-                            <select id="cyber-compliance" name="cyber-compliance" required>
-                                <option value="">Select compliance level</option>
-                                <option value="not-started">Not Started</option>
-                                <option value="cmmc-level-1">CMMC Level 1</option>
-                                <option value="cmmc-level-2-progress">CMMC Level 2 (In Progress)</option>
-                                <option value="cmmc-level-2-ready">CMMC Level 2 (Ready)</option>
-                                <option value="nist-800-171">NIST 800-171 Compliant</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Card 10: Target Agencies -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Mission Alignment</h3>
-                        <div class="form-group">
-                            <label for="target-agencies">Which federal missions are most closely aligned with your organization's long-term goals?</label>
-                            <input type="text" id="target-agencies" name="target-agencies" placeholder="e.g., DoD, VA, DHS, HHS, GSA" required>
-                        </div>
-                    </div>
-
-                    <!-- Card 11: Execution Capacity -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Execution Capacity</h3>
-                        <fieldset>
-                            <legend>Do you have the internal bandwidth for high-stakes bid execution, or are you looking for a turnkey capture partner?</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="execution" value="in-house" required>
-                                    In-House
-                                </label>
-                                <label>
-                                    <input type="radio" name="execution" value="turnkey">
-                                    Turnkey
-                                </label>
-                                <label>
-                                    <input type="radio" name="execution" value="hybrid">
-                                    Hybrid
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Card 12: Geographic Focus -->
-                    <div class="form-section">
-                        <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Operational Footprint</h3>
-                        <fieldset>
-                            <legend>Is your operational footprint focused on localized impact or nationwide deployment?</legend>
-                            <div class="radio-group">
-                                <label>
-                                    <input type="radio" name="geography" value="local" required>
-                                    Local
-                                </label>
-                                <label>
-                                    <input type="radio" name="geography" value="regional">
-                                    Regional
-                                </label>
-                                <label>
-                                    <input type="radio" name="geography" value="national">
-                                    National
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div style="text-align: center; margin-top: 40px;">
-                        <button type="submit" class="submit-btn">Submit for Analysis</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <!-- END SECTION: Intake Form -->
-    </main>
-
-    <!-- START SECTION: Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Black Orchid Business Group. All rights reserved.</p>
-                <p>Strategic Intelligence & Government Contracting Excellence</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- END SECTION: Footer -->
 
-    <script src="/js/dark-mode.js"></script>
-    <script src="/js/apex-form.js"></script>
-    <script src="/js/form-handlers.js"></script>
+            <!-- Card 2: Strategic Designations -->
+            <div class="form-card">
+                <h3>Strategic Designations</h3>
+                <div class="form-group">
+                    <label>What strategic designations can we leverage to give you a competitive edge?</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="certs" value="8a"> 8(a)</label>
+                        <label class="checkbox-item"><input type="checkbox" name="certs" value="wosb"> WOSB</label>
+                        <label class="checkbox-item"><input type="checkbox" name="certs" value="hubzone"> HUBZone</label>
+                        <label class="checkbox-item"><input type="checkbox" name="certs" value="sdvosb"> SDVOSB</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Primary Domain -->
+            <div class="form-card">
+                <h3>Domain of Expertise</h3>
+                <div class="form-group">
+                    <label>What is your primary domain of expertise where you deliver the most impact?</label>
+                    <input type="text" name="domain" placeholder="e.g., Healthcare IT, Logistics, Cybersecurity" required>
+                </div>
+            </div>
+
+            <!-- Card 4: Growth Scale -->
+            <div class="form-card">
+                <h3>Growth Positioning</h3>
+                <div class="form-group">
+                    <label>Where are you currently positioned on the growth curve in terms of annual scale?</label>
+                    <select name="growth-scale" required>
+                        <option value="">Select Range</option>
+                        <option value="startup">Establishing Phase (< $1M)</option>
+                        <option value="growth">Scaling Phase ($1M - $10M)</option>
+                        <option value="established">Established Phase ($10M+)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Card 5: Complexity/Past Performance -->
+            <div class="form-card">
+                <h3>Performance Excellence</h3>
+                <div class="form-group">
+                    <label>What is the highest level of complexity your team has successfully managed to date?</label>
+                    <textarea rows="4" name="complexity" placeholder="Briefly describe your most significant performance milestone..." required></textarea>
+                </div>
+            </div>
+
+            <!-- Card 6: Prime vs Sub -->
+            <div class="form-card">
+                <h3>Contracting Strategy</h3>
+                <div class="form-group">
+                    <label>Are you looking to lead as a Prime contractor, or is your strategy focused on high-value subcontracting?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="prime_sub" value="prime" required> Prime</label>
+                        <label class="radio-item"><input type="radio" name="prime_sub" value="sub"> Subcontracting</label>
+                        <label class="radio-item"><input type="radio" name="prime_sub" value="both"> Both</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Security Clearance -->
+            <div class="form-card">
+                <h3>Security Clearances</h3>
+                <div class="form-group">
+                    <label>Does your organization hold the necessary clearances for restricted or sensitive government missions?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="fcl" value="none" required> None</label>
+                        <label class="radio-item"><input type="radio" name="fcl" value="secret"> Secret</label>
+                        <label class="radio-item"><input type="radio" name="fcl" value="top-secret"> Top Secret</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Financial Readiness -->
+            <div class="form-card">
+                <h3>Financial Infrastructure</h3>
+                <div class="form-group">
+                    <label>Is your financial infrastructure ready to meet the sophisticated accounting standards required for federal contracts?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="dcaa" value="yes" required> Yes</label>
+                        <label class="radio-item"><input type="radio" name="dcaa" value="no"> No</label>
+                        <label class="radio-item"><input type="radio" name="dcaa" value="in-progress"> In-Progress</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9: Data Security -->
+            <div class="form-card">
+                <h3>Data Security Compliance</h3>
+                <div class="form-group">
+                    <label>Where do you stand on meeting the government's evolving data security and protection mandates?</label>
+                    <select name="data-security" required>
+                        <option value="">Select Status</option>
+                        <option value="compliant">Fully Compliant (CMMC/NIST)</option>
+                        <option value="gap-analysis">Gap Analysis Underway</option>
+                        <option value="not-started">Implementation Strategy Required</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Card 10: Missions/Agencies -->
+            <div class="form-card">
+                <h3>Mission Alignment</h3>
+                <div class="form-group">
+                    <label>Which federal missions are most closely aligned with your organization's long-term goals?</label>
+                    <input type="text" name="missions" placeholder="e.g., CMS Healthcare, DoD Modernization" required>
+                </div>
+            </div>
+
+            <!-- Card 11: Bandwidth -->
+            <div class="form-card">
+                <h3>Execution Capacity</h3>
+                <div class="form-group">
+                    <label>Do you have the internal bandwidth for high-stakes bid execution, or are you looking for a turnkey capture partner?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="bandwidth" value="in-house" required> In-house</label>
+                        <label class="radio-item"><input type="radio" name="bandwidth" value="turnkey"> Turnkey Capture</label>
+                        <label class="radio-item"><input type="radio" name="bandwidth" value="hybrid"> Hybrid Support</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12: Footprint -->
+            <div class="form-card">
+                <h3>Operational Footprint</h3>
+                <div class="form-group">
+                    <label>Is your operational footprint focused on localized impact or nationwide deployment?</label>
+                    <div class="radio-group">
+                        <label class="radio-item"><input type="radio" name="footprint" value="local" required> Local</label>
+                        <label class="radio-item"><input type="radio" name="footprint" value="regional"> Regional</label>
+                        <label class="radio-item"><input type="radio" name="footprint" value="national"> National</label>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn-gold">Initiate Roadmap Review</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Black Orchid Business Group LLC. All Rights Reserved.<br>
+    Intelligence. Strategy. Access.<br>
+    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
+
+<script src="js/dark-mode.js"></script>
+<script src="js/form-handlers.js"></script>
 </body>
 </html>
