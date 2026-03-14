@@ -1,21 +1,21 @@
-// Dark Mode Toggle for Elite Obsidian
+// Dark Mode Toggle - Elite Obsidian
 class DarkModeToggle {
     constructor() {
         this.toggle = document.getElementById('darkModeToggle');
         this.icon = this.toggle?.querySelector('.toggle-icon');
-        // Default is dark mode (Elite Obsidian)
-        this.isDark = localStorage.getItem('theme') !== 'light';
+        // Check saved preference, default to dark
+        this.isLight = localStorage.getItem('theme') === 'light';
         this.init();
     }
 
     init() {
-        // Apply saved theme or default to dark
-        if (this.isDark) {
-            document.body.classList.remove('light-mode');
-            if (this.icon) this.icon.textContent = '☀️';
-        } else {
+        // Apply saved theme
+        if (this.isLight) {
             document.body.classList.add('light-mode');
             if (this.icon) this.icon.textContent = '🌙';
+        } else {
+            document.body.classList.remove('light-mode');
+            if (this.icon) this.icon.textContent = '☀️';
         }
 
         // Add event listener
@@ -25,16 +25,16 @@ class DarkModeToggle {
     }
 
     toggleTheme() {
-        this.isDark = !this.isDark;
+        this.isLight = !this.isLight;
         
-        if (this.isDark) {
-            document.body.classList.remove('light-mode');
-            localStorage.setItem('theme', 'dark');
-            if (this.icon) this.icon.textContent = '☀️';
-        } else {
+        if (this.isLight) {
             document.body.classList.add('light-mode');
             localStorage.setItem('theme', 'light');
             if (this.icon) this.icon.textContent = '🌙';
+        } else {
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
+            if (this.icon) this.icon.textContent = '☀️';
         }
     }
 }
