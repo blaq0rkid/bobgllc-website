@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +12,14 @@
 <header>
     <div class="logo-container">
         <img src="logo.png" alt="BOBG Logo" class="logo-image">
-        <div class="logo-text">BLACK ORCHID BUSINESS GROUP</div>
+        <div class="logo-text">Black Orchid Business Group</div>
     </div>
     <nav>
         <a href="index.html">HOME</a>
         <a href="services.html">SERVICES</a>
         <a href="apex-roadmap.html">APEX ROADMAP</a>
         <a href="federal-diagnostic.html" class="active">FEDERAL DIAGNOSTIC</a>
-        <a href="sub-to-prime.html">SUB-TO-PRIME</a>
+        <a href="subtoprime.html">SUB-TO-PRIME</a>
         <a href="intelligence.html">INTELLIGENCE</a>
         <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
             <span class="toggle-icon">☀️</span>
@@ -40,8 +41,11 @@
             Strategic assessment of your federal contracting infrastructure and operational maturity
         </p>
 
-        <form name="federal-diagnostic" method="POST" data-netlify="true" action="/thank-you.html" class="form-cards-container">
+        <form name="federal-diagnostic" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="form-cards-container">
             <input type="hidden" name="form-name" value="federal-diagnostic" />
+            <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             
             <!-- Card 1: Governance Layer -->
             <div class="form-card">
