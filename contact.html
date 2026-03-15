@@ -7,93 +7,88 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">Black Orchid Business Group</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
-                </button>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="BOBG Logo" class="logo-image">
+        <div class="logo-text">Black Orchid Business Group</div>
+    </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="apex-roadmap.html">APEX ROADMAP</a>
+        <a href="federal-diagnostic.html">FEDERAL DIAGNOSTIC</a>
+        <a href="subtoprime.html">SUB-TO-PRIME</a>
+        <a href="intelligence.html">INTELLIGENCE</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html" class="active">CONTACT</a>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+            <span class="toggle-icon">☀️</span>
+        </button>
+    </nav>
+</header>
+
+<section class="hero" aria-labelledby="contact-heading">
+    <div class="hero-content">
+        <h1 id="contact-heading">Strategic Consultation</h1>
+        <p>Schedule a confidential discussion about your federal objectives</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="card">
+        <h2>Schedule a Meeting</h2>
+        <p style="color: var(--text-dim); margin-bottom: 2rem;">
+            We work with a limited number of clients to ensure strategic focus and operational excellence. Schedule a consultation to discuss your federal contracting objectives.
+        </p>
+        
+        <div style="min-height: 700px;">
+            <iframe 
+                src="https://calendly.com/kelley-bobgllc/new-meeting" 
+                width="100%" 
+                height="700" 
+                frameborder="0"
+                style="border: none; border-radius: 8px;">
+            </iframe>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>What to Expect</h2>
+        <div class="services-grid" style="margin-top: 2rem;">
+            <div class="service-card">
+                <h3>Initial Assessment</h3>
+                <p>We'll discuss your current position, federal objectives, and readiness level.</p>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Contact Us</h1>
-                <p>Let's discuss how we can help you succeed in government contracting</p>
+            <div class="service-card">
+                <h3>Strategic Alignment</h3>
+                <p>We'll determine if there's a mutual fit between your goals and our capabilities.</p>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h2>Get in Touch</h2>
-                        <p>Ready to take your government contracting to the next level? We're here to help. Reach out to discuss your specific needs and learn how Black Orchid Business Group can support your success.</p>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <h3>Email</h3>
-                                <p><a href="mailto:info@bobgllc.com">info@bobgllc.com</a></p>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <h3>Website</h3>
-                                <p><a href="https://bobgllc.com">bobgllc.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form">
-                        <h2>Send Us a Message</h2>
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Black Orchid Business Group. All rights reserved.</p>
-            <p>Strategic Intelligence & Government Contracting Solutions</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+            <div class="service-card">
+                <h3>Next Steps</h3>
+                <p>If aligned, we'll outline a strategic roadmap tailored to your federal market entry.</p>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="/js/dark-mode.js"></script>
+    <section class="card">
+        <h2>Contact Information</h2>
+        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+            Prefer to reach out directly? Use the information below.
+        </p>
+        <div style="line-height: 2;">
+            <p><strong>Email:</strong> <a href="mailto:kelley@bobgllc.com" style="color: var(--gold);">kelley@bobgllc.com</a></p>
+            <p><strong>Schedule:</strong> <a href="https://calendly.com/kelley-bobgllc/new-meeting" target="_blank" style="color: var(--gold);">Book directly via Calendly</a></p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Black Orchid Business Group LLC. All Rights Reserved.<br>
+    Intelligence. Strategy. Access.<br>
+    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
+
+<script src="js/dark-mode.js"></script>
 </body>
 </html>
