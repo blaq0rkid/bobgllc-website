@@ -40,8 +40,11 @@
             Comprehensive analysis of your infrastructure, capabilities, and market positioning
         </p>
 
-        <form name="subtoprime" method="POST" data-netlify="true" action="/thank-you.html" class="form-cards-container">
+        <form name="subtoprime" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="form-cards-container">
             <input type="hidden" name="form-name" value="subtoprime" />
+            <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             
             <!-- Card 1: Current Position -->
             <div class="form-card">
