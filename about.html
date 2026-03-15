@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,67 +8,98 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">Black Orchid Business Group</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="intelligence.html">Intelligence</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
-                </button>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="BOBG Logo" class="logo-image">
+        <div class="logo-text">Black Orchid Business Group</div>
+    </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="apex-roadmap.html">APEX ROADMAP</a>
+        <a href="federal-diagnostic.html">FEDERAL DIAGNOSTIC</a>
+        <a href="subtoprime.html">SUB-TO-PRIME</a>
+        <a href="intelligence.html">INTELLIGENCE</a>
+        <a href="about.html" class="active">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="privacy.html">PRIVACY</a>
+        <a href="terms.html">TERMS</a>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle light mode">
+            <span class="toggle-icon">☀️</span>
+        </button>
+    </nav>
+</header>
+
+<section class="hero" aria-labelledby="about-heading">
+    <div class="hero-content">
+        <h1 id="about-heading">About Black Orchid Business Group</h1>
+        <p>Precision. Intelligence. Results.</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="card">
+        <h2>Our Mission</h2>
+        <p style="color: var(--text-dim); margin-bottom: 2rem;">
+            Engineering federal market dominance through strategic intelligence and precision execution
+        </p>
+        <p>
+            Black Orchid Business Group was founded on a simple premise: federal contracting success is not about chasing opportunities—it's about engineering inevitability. We serve organizations that understand the federal marketplace requires more than compliance and proposals. It demands intelligence, strategic positioning, and operational excellence.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Our Approach</h2>
+        <p style="margin-bottom: 2rem;">
+            We don't operate like traditional consultants. We operate like strategists in a high-stakes environment where information asymmetry determines winners and losers.
+        </p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Intelligence-Driven</h3>
+                <p>We analyze federal procurement data, policy shifts, and agency priorities to identify opportunities before they become competitive.</p>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>About Us</h1>
-                <p>Empowering businesses to succeed in government contracting</p>
+            <div class="service-card">
+                <h3>Operationally Focused</h3>
+                <p>Strategy without execution is worthless. We ensure your infrastructure can support the contracts you pursue.</p>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="about-content">
-                    <h2>Who We Are</h2>
-                    <p>Black Orchid Business Group specializes in helping small to mid-sized businesses navigate the complex world of government contracting. With deep expertise in federal, state, county, and city procurement processes, we provide strategic guidance that transforms opportunities into awards.</p>
-
-                    <h2>Our Mission</h2>
-                    <p>We exist to level the playing field for businesses seeking to work with government agencies. Our mission is to provide the intelligence, strategy, and execution support that enables our clients to compete and win in the government marketplace.</p>
-
-                    <h2>Our Approach</h2>
-                    <p>We combine market intelligence, strategic positioning, and hands-on execution support to deliver results. Our team understands that every business is unique, and we tailor our services to your specific goals, capabilities, and growth objectives.</p>
-
-                    <h2>Why Choose Us</h2>
-                    <ul>
-                        <li>Deep expertise in government contracting at all levels</li>
-                        <li>Proven track record of helping clients win contracts</li>
-                        <li>Strategic approach focused on long-term success</li>
-                        <li>Personalized service tailored to your business</li>
-                        <li>Comprehensive support from research to award</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Black Orchid Business Group. All rights reserved.</p>
-            <p>Strategic Intelligence & Government Contracting Solutions</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+            <div class="service-card">
+                <h3>Results-Oriented</h3>
+                <p>We measure success by contract wins, not activity. Every engagement is designed to position you for federal revenue growth.</p>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="/js/dark-mode.js"></script>
+    <section class="card">
+        <h2>Who We Serve</h2>
+        <p>
+            Black Orchid Business Group works with organizations that meet specific criteria:
+        </p>
+        <ul style="margin-top: 1.5rem; color: var(--text-dim); line-height: 1.8;">
+            <li><strong>Proven operational excellence</strong> in their core domain</li>
+            <li><strong>Commitment to federal market entry</strong> as a strategic priority, not an experiment</li>
+            <li><strong>Leadership willing to invest</strong> in infrastructure, compliance, and capture activities</li>
+            <li><strong>Organizations that value intelligence</strong> over generic consulting</li>
+        </ul>
+        <p style="margin-top: 2rem;">
+            If your organization views federal contracting as a distraction rather than a strategic opportunity, we're not the right fit. If you're ready to compete at the highest level, we should talk.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Our Philosophy</h2>
+        <p style="color: var(--text-dim); font-style: italic; font-size: 1.2rem; line-height: 1.8;">
+            "The federal marketplace rewards those who understand that competitive advantage is built in the months and years before a solicitation is released. By the time an RFP drops, the outcome is often predetermined by relationships, past performance, and strategic positioning. We help you engineer that outcome."
+        </p>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Black Orchid Business Group LLC. All Rights Reserved.<br>
+    Intelligence. Strategy. Access.<br>
+    <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a>
+</footer>
+
+<script src="js/dark-mode.js"></script>
 </body>
 </html>
